@@ -10,13 +10,9 @@ function App() {
 
 	return (
     	<div className="App">
-			{/* <header>
-				<h3>if you see this message, soo this project has not finish yet, thank you for your visite.</h3>
-			</header> */}
-			<CustomAlert message="Thank you for visiting my website! Please note that my portfolio is currently under construction, but we hope you found everything else you were looking for." />
+			<CustomAlert message="Thank you for visiting my website! Please note that my portfolio is currently under construction, but we hope you found everything else you were looking for. Trying to finish it as soon as possible." />
 			<Navbar />
 			<WhoIam />
-			{/* {alert('if you see this message, soo this project has not finish yet, thank you for your visite.')} */}
 			<Projects />
     	</div>
 	)
