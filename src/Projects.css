@@ -3,11 +3,18 @@
 	background-size: cover;
 	background-position: center;
 	/* height: 100vh; */
-	padding-top: 5rem;
+	padding: 5rem 2rem;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 }
+
+.titlePart {
+	color:azure;
+	padding-bottom: 2rem;
+}
+
 .projects {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

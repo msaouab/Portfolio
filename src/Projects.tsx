@@ -4,6 +4,7 @@ import './Projects.css'
 const	Projects = () => {
 	return (
 		<main className='main'>
+			<h2 className='titlePart'>Projects for the test Part</h2>
 			<div className='projects'>
 				<a className="project-tile" href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank">
 					<img className="project-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project" />
