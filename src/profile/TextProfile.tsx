@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const TextContainer = styled.article`
 	width: 40%;
+	height: auto;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -15,24 +16,13 @@ const TextContainer = styled.article`
 			border-bottom: 1px solid #00ff00;
 		}
 	}
+	@media (max-width: 768px) {
+		width: 80%;
+	}
 `;
 
-const TypingText = ({ text }: { text: string }) => {
-	const [typedText, setTypedText] = useState("");
-	const [currentText, setCurrentText] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setTypedText((prev) => prev + text[currentText]);
-			setCurrentText((prev) => prev + 1);
-		}, 1000);
-		if (currentText === text.length) clearInterval(interval);
-		return () => clearInterval(interval);
-	}, []);
-	return <>{typedText}</>;
-};
-
 const TextProfile = () => {
+
 	return (
 		<TextContainer className="">
 			<p>

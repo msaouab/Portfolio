@@ -4,10 +4,11 @@ import { useState } from "react";
 
 const SocialMediaContainer = styled.div`
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 	gap: 1rem;
 	padding: 1rem;
+	border: 1px solid red;
 	& > a {
 		color: white;
 		border: 1px solid white;
@@ -42,7 +43,7 @@ const SocialMedia = () => {
 						href={link}
 						target="_blank"
 						rel="noreferrer"
-						className={active === index ? "active" : ""}
+						className={active === index ? "flex-item active" : "flex-item"}
 						onMouseEnter={() => {
 							setHover(index);
 							setActive(index);
