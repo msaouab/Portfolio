@@ -8,7 +8,6 @@ const SocialMediaContainer = styled.div`
 	flex-wrap: wrap;
 	gap: 1rem;
 	padding: 1rem;
-	border: 1px solid red;
 	& > a {
 		color: white;
 		border: 1px solid white;
@@ -31,8 +30,8 @@ const SocialMediaContainer = styled.div`
 `;
 
 const SocialMedia = () => {
-	const [hover, setHover] = useState(0);
-	const [active, setActive] = useState(0);
+	const [hover, setHover] = useState(3);
+	const [active, setActive] = useState(3);
 	return (
 		<SocialMediaContainer className="">
 			{ListSocialmedia.map((elem, index) => {
@@ -49,8 +48,8 @@ const SocialMedia = () => {
 							setActive(index);
 						}}
 						onMouseLeave={() => {
-							setHover(index);
-							setActive(index);
+							setHover(3);
+							setActive(3);
 						}}
 					>
 						{icon}

@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import itsme from "/its_me.jpg";
-import Background from "/Background.jpeg";
-import SocialMedia from "./profile/SocialMedia";
-import TextProfile from "./profile/TextProfile";
+import itsme from "/me.jpg";
+import SocialMedia from "./components/SocialMedia";
+import TextProfile from "./components/TextProfile";
 import { useEffect, useState } from "react";
 
 const ProfileContainer = styled.main`
@@ -11,14 +10,7 @@ const ProfileContainer = styled.main`
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	height: 100vh;
 	color: white;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-	url(${Background});
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	/* border: 1px solid red; */
 	& > hr {
 		width: 3rem;
 		height: 0.1rem;
@@ -37,9 +29,6 @@ const ProfileContainer = styled.main`
 			font-size: 1rem;
 		}
 	}
-	/* @media (max-width: 425px) {
-		width: 425px;
-	} */
 `;
 
 const ProfileImage = styled.div`
