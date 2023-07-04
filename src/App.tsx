@@ -7,13 +7,14 @@ import styled from "styled-components";
 
 const AppContainer = styled.div`
 	display: grid;
-	grid-template-rows: 10vh 80vh 10vh;
+	grid-template-rows: auto 1fr auto;
 	align-items: center;
-	@media (max-width: 1024px) {
-		gap: 3rem;
-		border: 1px solid red;
-		padding: 3rem 0;
-		grid-template-rows: auto 1fr auto;
+	padding: 2rem 0 1rem;
+	height: 95vh;
+	gap: 1rem;
+
+	& > footer {
+		padding: 1rem 0;
 	}
 `;
 
@@ -28,10 +29,8 @@ function AppRouter() {
 }
 
 function App() {
-
 	return (
-		<AppContainer
-		>
+		<AppContainer>
 			<header>
 				<NavBar />
 			</header>
