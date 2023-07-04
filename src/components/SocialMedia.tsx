@@ -1,41 +1,64 @@
-import	{ useEffect, useState } from 'react'
-import listSocialmedia from './data';
-import './SocialMedia.css'
+import styled from "styled-components";
+import ListSocialmedia from "../data/ListSocialmedia";
+import { useState } from "react";
 
-const	SocialMedia = () => {
-	const [isHover, setIsHover] = useState(0);
-	const [active, setActive] = useState(0);
-	const hoverOn = (id: number) => {
-		setIsHover(id);
+const SocialMediaContainer = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding: 1rem;
+	& > a {
+		color: white;
+		border: 1px solid white;
+		border-radius: 50%;
+		transition: border-radius 0.35s, transform 0.35s;
+		box-sizing: border-box;
+		text-decoration: none;
+		padding: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.3rem;
 	}
-	const hoverOut = (id: number) => {
-		setIsHover(id);
+	& > .active {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		transform: translate(2px, -4px);
+		transition: border-radius 0.35s, transform 0.35s, color 0.35s;
+		border-radius: 30px;
 	}
+`;
 
+const SocialMedia = () => {
+	const [hover, setHover] = useState(3);
+	const [active, setActive] = useState(3);
 	return (
-		<div className='media'>
-		{
-			listSocialmedia.map((el, i) => {
-				const {id, link, cls, name, icon} = el;
+		<SocialMediaContainer className="">
+			{ListSocialmedia.map((elem, index) => {
+				const { icon, link, name } = elem;
 				return (
-					<a href={link} key={i}
-					className={`${cls} ${active === id ? 'active' : ''}`}
-					onMouseEnter={() => {
-						hoverOn(id);
-						setActive(id);
-					}}
-					onMouseLeave={() => {
-						hoverOut(id);
-						setActive(id);
-					}}>
-					<img src={icon} alt={name} />
-					{isHover === id && <span>{name}</span>}
+					<a
+						key={index}
+						href={link}
+						target="_blank"
+						rel="noreferrer"
+						className={active === index ? "flex-item active" : "flex-item"}
+						onMouseEnter={() => {
+							setHover(index);
+							setActive(index);
+						}}
+						onMouseLeave={() => {
+							setHover(3);
+							setActive(3);
+						}}
+					>
+						{icon}
+						{hover === index && <span>{name}</span>}
 					</a>
-					)
-				})
-			}
-		</div>
-	)
-}
+				);
+			})}
+		</SocialMediaContainer>
+	);
+};
 
-export default SocialMedia
+export default SocialMedia;
