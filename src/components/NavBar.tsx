@@ -1,6 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Squash as Hamburger } from 'hamburger-react'
+import { Squash as Hamburger } from "hamburger-react";
+
+const listNav = [
+	{
+		link: "/",
+		name: "About Me",
+	},
+	{
+		link: "/contact",
+		name: "Contact Me",
+	},
+	{
+		link: "/edu",
+		name: "Education",
+	},
+	{
+		link: "/project",
+		name: "Projects",
+	},
+	{
+		link: "/work",
+		name: "Work Experience",
+	},
+];
 
 const NavBarContaier = styled.nav`
 	display: flex;
@@ -30,6 +53,10 @@ const NavBarContaier = styled.nav`
 			border-bottom: 2px solid rgba(255, 255, 255, 1);
 			transform: scale(1.1);
 			transition: all 0.3s ease;
+		}
+		& > a.active {
+			color: rgba(255, 255, 255, 1);
+			border-bottom: 2px solid rgba(255, 255, 255, 1);
 		}
 	}
 	@media (max-width: 1024px) {
@@ -66,7 +93,7 @@ const NavBarContaier = styled.nav`
 				justify-content: center;
 				position: absolute;
 				top: 4rem;
-				right: .77rem;
+				right: 0.77rem;
 			}
 		}
 	}
@@ -74,29 +101,35 @@ const NavBarContaier = styled.nav`
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [active, setActive] = useState("/");
+
+	useEffect(() => {
+		const path = window.location.pathname;
+		setActive(path);
+	}, []);
 
 	return (
 		<NavBarContaier className={isOpen ? "open" : " "}>
 			<div className="Topline" />
 			<div onClick={() => setIsOpen(!isOpen)} className="button">
-				<Hamburger toggled={isOpen} toggle={setIsOpen} color="#fff" duration={0.8} rounded/>
+				<Hamburger
+					toggled={isOpen}
+					toggle={setIsOpen}
+					color="#fff"
+					duration={0.8}
+					rounded
+				/>
 			</div>
 			<nav className="">
-				<a id="me" href="/">
-					About Me
-				</a>
-				<a id="contact" href="/Contact">
-					Contact Me
-				</a>
-				<a id="edu" href="/Edu">
-					Education
-				</a>
-				<a id="project" href="/Project">
-					Projects
-				</a>
-				<a id="work" href="/Work">
-					Work Experience
-				</a>
+				{listNav.map((item, index) => (
+					<a
+						key={index}
+						href={item.link}
+						className={active === item.link ? "active" : ""}
+					>
+						{item.name}
+					</a>
+				))}
 			</nav>
 		</NavBarContaier>
 	);
