@@ -4,6 +4,7 @@ import Profile from "./Profile";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import styled from "styled-components";
+import Edu from "./Edu";
 
 const AppContainer = styled.div`
 	display: grid;
@@ -23,6 +24,7 @@ function AppRouter() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Profile />} />
+				<Route path="/edu" element={<Edu />} />
 			</Routes>
 		</BrowserRouter>
 	);

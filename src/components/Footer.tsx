@@ -16,7 +16,7 @@ const BottomNav = styled.div`
 		}
 	}
 	& > .Bottomline {
-		width: 30%;
+		width: 40%;
 		height: 0.15rem;
 		background-color: white;
 	}
