@@ -107,9 +107,9 @@ const Edu = () => {
 				</p>
 			</section>
 			<section className="s2">
-				{/* <div className="iframe">
+				<div className="iframe">
 					<iframe src="https://1337.ma/en/" frameBorder="0"></iframe>
-				</div> */}
+				</div>
 				<article>
 					<img src={alone} alt="" />
 					<img src={compus_kh} alt="" />

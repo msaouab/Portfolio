@@ -74,9 +74,6 @@ const Profile = () => {
 			<hr className="" />
 			<SocialMedia />
 			<TextProfile />
-			<div className="iframe">
-					<iframe src="https://1337.ma/en/" frameBorder="0"></iframe>
-				</div>
 		</ProfileContainer>
 	);
 };
