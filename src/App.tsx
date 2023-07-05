@@ -5,27 +5,44 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import styled from "styled-components";
 import Edu from "./Edu";
+import Projects from "./Projects";
 
 const AppContainer = styled.div`
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	align-items: center;
-	padding: 2rem 0 1rem;
-	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	gap: 1rem;
-
+	& > main {
+		flex-grow: 1;
+	}
 	& > footer {
 		padding: 1rem 0;
+	}
+`;
+
+const RoutesContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	/* height: 80vh; */
+	& > :nth-child(2) {
+		margin: auto;
+	}
+	@media (max-width: 1024px) {
+		height: auto;
 	}
 `;
 
 function AppRouter() {
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Profile />} />
-				<Route path="/edu" element={<Edu />} />
-			</Routes>
+			<RoutesContainer>
+				<NavBar />
+				<Routes>
+					<Route path="/" element={<Profile />} />
+					<Route path="/edu" element={<Edu />} />
+					<Route path="/project" element={<Projects />} />
+				</Routes>
+			</RoutesContainer>
 		</BrowserRouter>
 	);
 }
@@ -33,9 +50,6 @@ function AppRouter() {
 function App() {
 	return (
 		<AppContainer>
-			<header>
-				<NavBar />
-			</header>
 			<main>
 				<AppRouter />
 			</main>

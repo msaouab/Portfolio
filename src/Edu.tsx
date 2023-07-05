@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import exam from "./assets/exam.jpeg";
 import alone from "./assets/alone.jpeg";
 import compus from "./assets/compus.jpeg";
 import compus_kh from "./assets/compus_kh.jpg";
@@ -108,7 +107,7 @@ const Edu = () => {
 			</section>
 			<section className="s2">
 				<div className="iframe">
-					<iframe src="https://1337.ma/en/" frameBorder="0"></iframe>
+					<iframe src="https://1337.ma/en/concept" frameBorder="0"></iframe>
 				</div>
 				<article>
 					<img src={alone} alt="" />

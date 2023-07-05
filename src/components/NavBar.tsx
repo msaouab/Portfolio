@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Squash as Hamburger } from "hamburger-react";
+import { Link, NavLink } from "react-router-dom";
 
 const listNav = [
 	{
@@ -25,15 +26,18 @@ const listNav = [
 	},
 ];
 
-const NavBarContaier = styled.nav`
+const NavBarContainer = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	/* height: 4rem; */
 	margin-right: 4%;
+	padding: 1rem 0;
 	& > .Topline {
 		width: 40%;
 		height: 0.15rem;
 		background-color: white;
+		cursor: text;
 	}
 	& > .button {
 		display: none;
@@ -101,15 +105,13 @@ const NavBarContaier = styled.nav`
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [active, setActive] = useState("/");
 
 	useEffect(() => {
-		const path = window.location.pathname;
-		setActive(path);
-	}, []);
+		console.log(window.location.pathname)
+	}, [window.location.pathname]);
 
 	return (
-		<NavBarContaier className={isOpen ? "open" : " "}>
+		<NavBarContainer className={isOpen ? "open" : ''}>
 			<div className="Topline" />
 			<div onClick={() => setIsOpen(!isOpen)} className="button">
 				<Hamburger
@@ -122,16 +124,16 @@ const NavBar = () => {
 			</div>
 			<nav className="">
 				{listNav.map((item, index) => (
-					<a
+					<NavLink
 						key={index}
-						href={item.link}
-						className={active === item.link ? "active" : ""}
+						to={item.link}
+						className={`${location.pathname === 'test' ? 'active' : '' }`}
 					>
 						{item.name}
-					</a>
+					</NavLink>
 				))}
 			</nav>
-		</NavBarContaier>
+		</NavBarContainer>
 	);
 };
 
