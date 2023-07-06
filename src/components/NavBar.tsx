@@ -106,10 +106,6 @@ const NavBarContainer = styled.nav`
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	useEffect(() => {
-		console.log(window.location.pathname)
-	}, [window.location.pathname]);
-
 	return (
 		<NavBarContainer className={isOpen ? "open" : ''}>
 			<div className="Topline" />

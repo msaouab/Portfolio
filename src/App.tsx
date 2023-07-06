@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import styled from "styled-components";
 import Edu from "./Edu";
 import Projects from "./Projects";
+import { useEffect } from "react";
 
 const AppContainer = styled.div`
 	display: flex;
@@ -48,6 +49,23 @@ function AppRouter() {
 }
 
 function App() {
+
+	useEffect(() => {
+		const doctitle = document.title;
+		window.onblur = () => {
+			document.title = "Come back soon :(";
+		};
+
+		window.onfocus = () => {
+			document.title = doctitle;
+		};
+		
+		return () => {
+			window.onblur = null;
+			window.onfocus = null;
+		};
+	}, []);
+	
 	return (
 		<AppContainer>
 			<main>
