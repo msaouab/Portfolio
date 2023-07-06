@@ -23,7 +23,7 @@ const AppContainer = styled.div`
 const RoutesContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	/* height: 80vh; */
+	height: 80vh;
 	& > :nth-child(2) {
 		margin: auto;
 	}
