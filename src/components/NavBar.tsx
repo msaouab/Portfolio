@@ -8,10 +8,10 @@ const listNav = [
 		link: "/",
 		name: "About Me",
 	},
-	{
-		link: "/contact",
-		name: "Contact Me",
-	},
+	// {
+	// 	link: "/contact",
+	// 	name: "Contact Me",
+	// },
 	{
 		link: "/edu",
 		name: "Education",
@@ -20,10 +20,10 @@ const listNav = [
 		link: "/project",
 		name: "Projects",
 	},
-	{
-		link: "/work",
-		name: "Work Experience",
-	},
+	// {
+	// 	link: "/work",
+	// 	name: "Work Experience",
+	// },
 ];
 
 const NavBarContainer = styled.nav`

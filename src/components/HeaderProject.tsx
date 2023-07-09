@@ -1,90 +1,54 @@
-import { useState } from "react";
-import {
-	AiOutlineArrowsAlt,
-	AiOutlineClose,
-	AiOutlineMinus,
-} from "react-icons/ai";
 import styled from "styled-components";
+import ProjectsCard from "./ProjectsCard";
 
-const HeaderContainer = styled.div`
-	width: 100%;
-	header {
-		display: flex;
-		align-items: center;
-		background: linear-gradient(
-			90deg,
-			rgba(207, 229, 235, 1) 0%,
-			rgba(120, 120, 120, 1) 100%
-		);
+const ProjectsContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 90%;
+	& > main {
 		width: 100%;
-		border-radius: 10px 10px 0 0;
-		& > .threePoints {
+		align-items: center;
+		justify-content: center;
+		& > ul {
+			border: 1px solid #eaeaea;
 			display: flex;
-			gap: 0.2rem;
-			margin-left: 0.5rem;
-			& > span {
-				width: 12px;
-				height: 12px;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				& > svg {
-					width: 10px;
-					height: 10px;
-				}
-			}
-			& > .red {
-				background-color: #ff5f56;
-			}
-			& > .yellow {
-				background-color: #ffbd2e;
-			}
-			& > .green {
-				background-color: #27c93f;
-			}
-		}
-		& > .threePoints:hover {
-			& > span {
-				cursor: pointer;
-			}
-		}
-		& > p {
-			color: #ffffff;
-			margin: auto;
+			flex-wrap: wrap;
+			gap: 1rem;
+			justify-content: center;
 		}
 	}
 `;
 
-const HeaderProject = () => {
-	const [hover, setHover] = useState(true);
+interface Project {
+	name: string;
+	technologies: string[];
+}
 
-	const handleMouseEnter = () => {
-		setHover(true);
-	};
-	const handleMouseLeave = () => {
-		setHover(false);
-	};
+interface ProjectsProps {
+	projects: Project[];
+	selected: string | null;
+}
+
+const HeaderProject: React.FC<ProjectsProps> = ({ projects, selected }) => {
+	const filterProjects = selected
+		? projects.filter((project) => project.technologies.includes(selected))
+		: projects;
 
 	return (
-		<HeaderContainer>
-			<header>
-				<div
-					className={`threePoints`}
-					onMouseEnter={handleMouseEnter}
-					onMouseLeave={handleMouseLeave}
-				>
-					<span className="red">{hover && <AiOutlineClose />}</span>
-					<span className="yellow">
-						{hover && <AiOutlineMinus />}
-					</span>
-					<span className="green">
-						{hover && <AiOutlineArrowsAlt />}
-					</span>
-				</div>
-				<p>Mohamed Saouab@1337:~/Project</p>
-			</header>
-		</HeaderContainer>
+		<ProjectsContainer>
+			<main className=" ">
+				{filterProjects.length > 0 ? (
+					<ul>
+						{filterProjects.map((project, index) => (
+							<ProjectsCard project={project} key={index} />
+						))}
+					</ul>
+				) : (
+					<p>No projects found.</p>
+				)}
+			</main>
+		</ProjectsContainer>
 	);
 };
 
