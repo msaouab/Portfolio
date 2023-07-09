@@ -22,8 +22,8 @@ const SideBar = styled.div`
 		width: 100%;
 		flex-direction: row;
 		overflow-x: auto;
-		scrollbar-color: #ff0000 traparent;
-		scrollbar-width: unset;
+		scrollbar-color: #ffffff #242020;
+		scrollbar-width: auto;
 		justify-content: space-between;
 		gap: 0.1rem;
 		& > .technologies {

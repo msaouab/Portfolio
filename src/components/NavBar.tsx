@@ -53,7 +53,6 @@ const NavBarContainer = styled.nav`
 		}
 		& > a:hover {
 			color: rgba(255, 255, 255, 1);
-			font-size: 1.1rem;
 			border-bottom: 2px solid rgba(255, 255, 255, 1);
 			transform: scale(1.1);
 			transition: all 0.3s ease;
