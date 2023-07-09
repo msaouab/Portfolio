@@ -5,7 +5,6 @@ const SideBar = styled.div`
 	width: 10rem;
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	& > .technologies {
 		height: 50px;
 		color: #fff;
@@ -20,10 +19,11 @@ const SideBar = styled.div`
 		cursor: pointer;
 	}
 	@media (max-width: 1000px) {
-		border: 1px solid #eaeaea;
 		width: 100%;
 		flex-direction: row;
-		overflow-x: scroll;
+		overflow-x: auto;
+		scrollbar-color: #ff0000 traparent;
+		scrollbar-width: unset;
 		justify-content: space-between;
 		gap: 0.1rem;
 		& > .technologies {

@@ -30,7 +30,6 @@ const NavBarContainer = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	/* height: 4rem; */
 	margin-right: 4%;
 	padding: 1rem 0;
 	& > .Topline {
@@ -54,6 +53,7 @@ const NavBarContainer = styled.nav`
 		}
 		& > a:hover {
 			color: rgba(255, 255, 255, 1);
+			font-size: 1.1rem;
 			border-bottom: 2px solid rgba(255, 255, 255, 1);
 			transform: scale(1.1);
 			transition: all 0.3s ease;
@@ -96,8 +96,17 @@ const NavBarContainer = styled.nav`
 				flex-direction: column;
 				justify-content: center;
 				position: absolute;
-				top: 4rem;
-				right: 0.77rem;
+				top: 2.8rem;
+				right: 1.6rem;
+				width: 10rem;
+				background-color: #242020;
+				& > a {
+					color: #fff;
+					height: 2rem;
+				}
+				& > :first-child {
+					margin-top: 1rem;
+				}
 			}
 		}
 	}
@@ -107,7 +116,7 @@ const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<NavBarContainer className={isOpen ? "open" : ''}>
+		<NavBarContainer className={isOpen ? "open" : ""}>
 			<div className="Topline" />
 			<div onClick={() => setIsOpen(!isOpen)} className="button">
 				<Hamburger
@@ -123,7 +132,10 @@ const NavBar = () => {
 					<NavLink
 						key={index}
 						to={item.link}
-						className={`${location.pathname === 'test' ? 'active' : '' }`}
+						className={`${
+							location.pathname === "test" ? "active" : ""
+						}`}
+						onClick={() => setIsOpen(!isOpen)}
 					>
 						{item.name}
 					</NavLink>

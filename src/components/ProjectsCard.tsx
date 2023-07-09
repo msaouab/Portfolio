@@ -24,7 +24,7 @@ const CradsContainer = styled.div`
 		}
 	}
 	.project-tile:hover .code {
-		color: #303841;
+		color: orange;
 	}
 	@media (max-width: 500px) {
 		& > img {
