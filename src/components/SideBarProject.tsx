@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import About from "../Profile";
-import ProjectsCard from "./ProjectsCard";
 
 const SideBar = styled.div`
-	/* border: 1px solid #eaeaea; */
-	width: 15%;
+	width: 10rem;
 	display: flex;
 	flex-direction: column;
+	/* justify-content: center; */
 	& > .technologies {
 		height: 50px;
 		color: #fff;
@@ -21,11 +19,18 @@ const SideBar = styled.div`
 		color: #000;
 		cursor: pointer;
 	}
-	& > :first-child:hover {
-		border-radius: 8px 0 0 0;
-	}
-	& > :last-child:hover {
-		border-radius: 0 0 0 8px;
+	@media (max-width: 1000px) {
+		border: 1px solid #eaeaea;
+		width: 100%;
+		flex-direction: row;
+		overflow-x: scroll;
+		justify-content: space-between;
+		gap: 0.1rem;
+		& > .technologies {
+			border: 1px solid #eaeaea;
+			padding: 0 10px;
+			border-radius: 0px;
+		}
 	}
 `;
 
@@ -34,7 +39,10 @@ interface TechnologiesProps {
 	onSelectTech: (technology: string) => void;
 }
 
-const SideBarProject: React.FC<TechnologiesProps> = ({ technologies, onSelectTech }) => {
+const SideBarProject: React.FC<TechnologiesProps> = ({
+	technologies,
+	onSelectTech,
+}) => {
 	const [activeLink, setActiveLink] = useState(0);
 
 	const handleSelect = (index: number) => {

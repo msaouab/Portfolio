@@ -34,6 +34,24 @@ const projects = [
 		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
 		description: "",
 	},
+	{
+		name: "Project 4",
+		link: "https://github.com/msaouab/",
+		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
+		description: "",
+	},
+	{
+		name: "Project 4",
+		link: "https://github.com/msaouab/",
+		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
+		description: "",
+	},
+	{
+		name: "Project 4",
+		link: "https://github.com/msaouab/",
+		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
+		description: "",
+	},
 ];
 
 export { Technologies, projects };

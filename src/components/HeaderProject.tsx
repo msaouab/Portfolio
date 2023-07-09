@@ -6,14 +6,15 @@ const ProjectsContainer = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	width: 90%;
+	margin: auto;
 	& > main {
 		width: 100%;
 		align-items: center;
 		justify-content: center;
 		& > ul {
-			border: 1px solid #eaeaea;
-			display: flex;
-			flex-wrap: wrap;
+			/* border: 1px solid #fff; */
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 			gap: 1rem;
 			justify-content: center;
 		}
@@ -37,7 +38,7 @@ const HeaderProject: React.FC<ProjectsProps> = ({ projects, selected }) => {
 
 	return (
 		<ProjectsContainer>
-			<main className=" ">
+			<main>
 				{filterProjects.length > 0 ? (
 					<ul>
 						{filterProjects.map((project, index) => (

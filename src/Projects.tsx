@@ -17,9 +17,14 @@ const ProjectContainer = styled.main`
 		font-size: 4rem;
 	}
 	& > section {
-		border: 1px solid #eaeaea;
 		display: flex;
 		width: 100%;
+	}
+	@media (max-width: 1000px) {
+		& > section {
+			flex-direction: column;
+			gap: 2rem;
+		}
 	}
 `;
 
@@ -32,7 +37,7 @@ const Project = () => {
 
 	return (
 		<ProjectContainer>
-			<h1>Projects</h1>
+			{/* <h1>Projects</h1> */}
 			<section>
 				<SideBarProject
 					technologies={Technologies}
