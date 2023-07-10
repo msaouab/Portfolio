@@ -41,7 +41,6 @@ const ProjectsCard = (project: any, key: number) => {
 	return (
 		<CradsContainer>
 			<img src={OverView} alt={name} />
-			{/* <h3>{name}</h3> */}
 			<a className="project-tile" href={link} target="_blank">
 				<p className="project-title">
 					<span className="code">&lt; </span>

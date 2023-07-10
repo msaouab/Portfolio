@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const SideBar = styled.div`
-	width: 10rem;
 	display: flex;
 	flex-direction: column;
 	& > .technologies {
@@ -11,7 +10,7 @@ const SideBar = styled.div`
 		text-decoration: none;
 		display: flex;
 		align-items: center;
-		padding-left: 10px;
+		padding: 0 1rem;
 	}
 	& > .technologies:hover {
 		background-color: #eaeaea;
@@ -19,17 +18,17 @@ const SideBar = styled.div`
 		cursor: pointer;
 	}
 	@media (max-width: 1000px) {
+		border: 1px solid #fff;
 		width: 100%;
 		flex-direction: row;
 		overflow-x: auto;
 		scrollbar-color: #ffffff #242020;
 		scrollbar-width: auto;
 		justify-content: space-between;
-		gap: 0.1rem;
+		/* gap: 0.1rem; */
 		& > .technologies {
-			border: 1px solid #eaeaea;
-			padding: 0 10px;
 			border-radius: 0px;
+			padding: 0 0.5rem;
 		}
 	}
 `;

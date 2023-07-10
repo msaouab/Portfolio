@@ -9,27 +9,24 @@ import Projects from "./Projects";
 import { useEffect } from "react";
 
 const AppContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	gap: 1rem;
-	& > main {
-		flex-grow: 1;
-	}
-	& > footer {
-		padding: 1rem 0;
-	}
 `;
 
 const RoutesContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	height: 80vh;
-	& > :nth-child(2) {
-		margin: auto;
+	display: grid;
+	grid-template-rows: 5vh auto 5vh;
+	align-items: center;
+	height: 100vh;
+	gap: 2rem;
+	& > header {
+		padding-top: 1rem;
 	}
-	@media (max-width: 1024px) {
-		height: auto;
+	& > main {
+		padding-top: 2rem;
+	}
+	& > footer {
+		padding-bottom: 1rem;
+	}
+	@media (max-width: 1000px) {
 	}
 `;
 
@@ -37,19 +34,25 @@ function AppRouter() {
 	return (
 		<BrowserRouter>
 			<RoutesContainer>
-				<NavBar />
-				<Routes>
-					<Route path="/" element={<Profile />} />
-					<Route path="/edu" element={<Edu />} />
-					<Route path="/project" element={<Projects />} />
-				</Routes>
+				<header>
+					<NavBar />
+				</header>
+				<main>
+					<Routes>
+						<Route path="/" element={<Profile />} />
+						<Route path="/edu" element={<Edu />} />
+						<Route path="/project" element={<Projects />} />
+					</Routes>
+				</main>
+				<footer>
+					<Footer />
+				</footer>
 			</RoutesContainer>
 		</BrowserRouter>
 	);
 }
 
 function App() {
-
 	useEffect(() => {
 		const doctitle = document.title;
 		window.onblur = () => {
@@ -59,21 +62,19 @@ function App() {
 		window.onfocus = () => {
 			document.title = doctitle;
 		};
-		
+
 		return () => {
 			window.onblur = null;
 			window.onfocus = null;
 		};
 	}, []);
-	
+
 	return (
 		<AppContainer>
-			<main>
+			{/* <main> */}
 				<AppRouter />
-			</main>
-			<footer>
-				<Footer />
-			</footer>
+			{/* </main> */}
+			{/* <footer><Footer /></footer> */}
 		</AppContainer>
 	);
 }

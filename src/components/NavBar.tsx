@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Squash as Hamburger } from "hamburger-react";
 import { Link, NavLink } from "react-router-dom";
@@ -113,14 +113,33 @@ const NavBarContainer = styled.nav`
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const navRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+
+		const handleClickOutside = (event: any) => {
+			if (navRef.current && !navRef.current.contains(event.target)) {
+				setIsOpen(false);
+			}
+		};
+
+		window.addEventListener('click', handleClickOutside);
+		return () => {
+			window.removeEventListener('click', handleClickOutside);
+		};
+	}, []);
+
+	const handleToggle = () => {
+		setIsOpen(!isOpen);
+	};
 
 	return (
 		<NavBarContainer className={isOpen ? "open" : ""}>
 			<div className="Topline" />
-			<div onClick={() => setIsOpen(!isOpen)} className="button">
+			<div onClick={handleToggle} className="button">
 				<Hamburger
 					toggled={isOpen}
-					toggle={setIsOpen}
+					toggle={handleToggle}
 					color="#fff"
 					duration={0.8}
 					rounded
@@ -134,7 +153,7 @@ const NavBar = () => {
 						className={`${
 							location.pathname === "test" ? "active" : ""
 						}`}
-						onClick={() => setIsOpen(!isOpen)}
+						onClick={() => setIsOpen(false)}
 					>
 						{item.name}
 					</NavLink>

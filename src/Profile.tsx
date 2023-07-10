@@ -15,7 +15,6 @@ const ProfileContainer = styled.main`
 		width: 3rem;
 		height: 0.1rem;
 		background-color: white;
-		border: 1px solid white;
 		border-radius: 1rem;
 	}
 	& > h1 {

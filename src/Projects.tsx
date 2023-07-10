@@ -11,11 +11,6 @@ const ProjectContainer = styled.main`
 	width: 90%;
 	margin: auto;
 	gap: 2rem;
-	& > h1 {
-		text-align: center;
-		color: #fff;
-		font-size: 4rem;
-	}
 	& > section {
 		display: flex;
 		width: 100%;
@@ -38,7 +33,7 @@ const Project = () => {
 	return (
 		<ProjectContainer>
 			{/* <h1>Projects</h1> */}
-			<section>
+			<section className="">
 				<SideBarProject
 					technologies={Technologies}
 					onSelectTech={handleSelect}

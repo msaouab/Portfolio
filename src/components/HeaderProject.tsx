@@ -12,11 +12,11 @@ const ProjectsContainer = styled.div`
 		align-items: center;
 		justify-content: center;
 		& > ul {
-			/* border: 1px solid #fff; */
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 			gap: 1rem;
 			justify-content: center;
+			align-items: center;
 		}
 	}
 `;
