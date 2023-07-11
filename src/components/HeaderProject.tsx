@@ -15,8 +15,11 @@ const ProjectsContainer = styled.div`
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 			gap: 1rem;
-			justify-content: center;
-			align-items: center;
+		}
+		& > .notfund {
+			color: #fff;
+			text-align: center;
+			font-size: 1.5rem;
 		}
 	}
 `;
@@ -46,7 +49,7 @@ const HeaderProject: React.FC<ProjectsProps> = ({ projects, selected }) => {
 						))}
 					</ul>
 				) : (
-					<p>No projects found.</p>
+					<p className="notfund">No projects found.</p>
 				)}
 			</main>
 		</ProjectsContainer>

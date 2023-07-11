@@ -3,8 +3,13 @@ import styled from "styled-components";
 
 const SideBar = styled.div`
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: auto;
 	& > .technologies {
+		border: 1px solid #ffffff;
 		height: 50px;
 		color: #fff;
 		text-decoration: none;
@@ -17,21 +22,8 @@ const SideBar = styled.div`
 		color: #000;
 		cursor: pointer;
 	}
-	@media (max-width: 1000px) {
-		border: 1px solid #fff;
-		width: 100%;
-		flex-direction: row;
-		overflow-x: auto;
-		scrollbar-color: #ffffff #242020;
-		scrollbar-width: auto;
-		justify-content: space-between;
-		/* gap: 0.1rem; */
-		& > .technologies {
-			border-radius: 0px;
-			padding: 0 0.5rem;
-		}
-	}
 `;
+
 
 interface TechnologiesProps {
 	technologies: string[];
@@ -51,6 +43,7 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 
 	return (
 		<SideBar>
+			<div className="Bar"></div>
 			{technologies.map((elem, index) => (
 				<div
 					key={index}

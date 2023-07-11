@@ -9,8 +9,12 @@ const CradsContainer = styled.div`
 	color: #fff;
 	& > img {
 		width: 400px;
+		border: 3px solid #ffffff;
+		border-bottom: none;
 	}
 	& > a {
+		border: 3px solid #ffffff;
+		border-top: none;
 		width: 400px;
 		text-align: center;
 		color: #fff;

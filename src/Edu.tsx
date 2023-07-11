@@ -33,15 +33,14 @@ const EduContainer = styled.div`
 		}
 	}
 	& > .s2 {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		flex-wrap: wrap;
+		border: 3px solid #ffffff;
+		/* display: flex; */
+		/* justify-content: center; */
+		/* flex-wrap: wrap; */
 		gap: 1rem;
+		width: 60%;
 		& > .iframe {
-			background-color: #f4f4f4;
-			width: 70%;
-			height: 500px;
+			height: 550px;
 			& > iframe {
 				width: 100%;
 				height: 100%;
@@ -107,13 +106,16 @@ const Edu = () => {
 			</section>
 			<section className="s2">
 				<div className="iframe">
-					<iframe src="https://1337.ma/en/concept" frameBorder="0"></iframe>
+					<iframe
+						src="https://1337.ma/en/concept"
+						frameBorder="0"
+					></iframe>
 				</div>
-				<article>
+				{/* <article>
 					<img src={alone} alt="" />
 					<img src={compus_kh} alt="" />
 					<img src={compus} alt="" />
-				</article>
+				</article> */}
 			</section>
 		</EduContainer>
 	);

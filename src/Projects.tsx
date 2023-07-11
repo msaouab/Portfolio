@@ -6,21 +6,8 @@ import { Technologies, projects } from "./components/projects/ProjectData";
 
 const ProjectContainer = styled.main`
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
-	width: 90%;
-	margin: auto;
-	gap: 2rem;
-	& > section {
-		display: flex;
-		width: 100%;
-	}
-	@media (max-width: 1000px) {
-		& > section {
-			flex-direction: column;
-			gap: 2rem;
-		}
-	}
+	gap: 4rem;
 `;
 
 const Project = () => {
@@ -32,14 +19,11 @@ const Project = () => {
 
 	return (
 		<ProjectContainer>
-			{/* <h1>Projects</h1> */}
-			<section className="">
 				<SideBarProject
 					technologies={Technologies}
 					onSelectTech={handleSelect}
 				/>
 				<HeaderProject projects={projects} selected={selected} />
-			</section>
 		</ProjectContainer>
 	);
 };

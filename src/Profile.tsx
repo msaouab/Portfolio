@@ -47,7 +47,7 @@ const ProfileImage = styled.div`
 	}
 `;
 
-const TypingText = ({ text }: { text: string }) => {
+export const TypingText = ({ text }: { text: string }) => {
 	const [typedText, setTypedText] = useState("");
 	const [currentText, setCurrentText] = useState(0);
 

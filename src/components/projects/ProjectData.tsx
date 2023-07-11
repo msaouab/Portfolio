@@ -10,6 +10,13 @@ const Technologies = [
 
 const projects = [
 	{
+		name: "minishell",
+		link: "https://github.com/msaouab/Minishell-42",
+		img: "",
+		technologies: ["C / Cpp"],
+		description: "",
+	},
+	{
 		name: "ft_Containers",
 		link: "https://github.com/msaouab/ft_Containers",
 		img: "",
@@ -17,39 +24,24 @@ const projects = [
 		description: "",
 	},
 	{
+		name: "ft_IRC",
+		link: "https://github.com/msaouab/ft_irc",
+		img: "",
+		technologies: ["C / Cpp"],
+		description: "",
+	},
+	{
 		name: "Inception",
 		link: "https://github.com/msaouab/Inception",
-		technologies: ["DevOps"],
+		img: "",
+		technologies: ["DevOps", "JavaScript", "TypeScript", "ReactJs", "NestJs"],
 		description: "",
 	},
 	{
 		name: "ft_transcendence",
-		link: "https://github.com/msaouab/",
+		link: "https://github.com/msaouab/ft_transcendence",
+		img: "",
 		technologies: ["React", "TypeScript", "NestJs", "DevOps"],
-		description: "",
-	},
-	{
-		name: "Project 4",
-		link: "https://github.com/msaouab/",
-		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
-		description: "",
-	},
-	{
-		name: "Project 4",
-		link: "https://github.com/msaouab/",
-		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
-		description: "",
-	},
-	{
-		name: "Project 4",
-		link: "https://github.com/msaouab/",
-		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
-		description: "",
-	},
-	{
-		name: "Project 4",
-		link: "https://github.com/msaouab/",
-		technologies: ["ReactJs", "JavaScript", "TypeScript", "DevOps"],
 		description: "",
 	},
 ];
