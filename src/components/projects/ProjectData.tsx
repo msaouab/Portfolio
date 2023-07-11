@@ -1,3 +1,4 @@
+import trans from '/Overview.jpg'
 
 const Technologies = [
 	"C / Cpp",
@@ -34,15 +35,21 @@ const projects = [
 		name: "Inception",
 		link: "https://github.com/msaouab/Inception",
 		img: "",
-		technologies: ["DevOps", "JavaScript", "TypeScript", "ReactJs", "NestJs"],
+		technologies: ["DevOps"],
 		description: "",
 	},
 	{
 		name: "ft_transcendence",
 		link: "https://github.com/msaouab/ft_transcendence",
-		img: "",
-		technologies: ["React", "TypeScript", "NestJs", "DevOps"],
+		img: {trans},
+		technologies: ["ReactJs", "TypeScript", "NestJs", "DevOps"],
 		description: "",
+	},
+	{
+		name: "BootCamp Web Dev",
+		link: "https://github.com/msaouab/BootCamp-React-projects-js-ts",
+		img: "",
+		technologies: ["JavaScript", "TypeScript", "ReactJs"],
 	},
 ];
 
