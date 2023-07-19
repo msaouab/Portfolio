@@ -1,4 +1,5 @@
 import trans from '/Overview.jpg'
+import GifApi from '/src/assets/ProjectsImg/GifsAPi.png'
 
 const Technologies = [
 	"C / Cpp",
@@ -41,7 +42,7 @@ const projects = [
 	{
 		name: "ft_transcendence",
 		link: "https://github.com/msaouab/ft_transcendence",
-		img: {trans},
+		img: trans,
 		technologies: ["ReactJs", "TypeScript", "NestJs", "DevOps"],
 		description: "",
 	},
@@ -50,6 +51,12 @@ const projects = [
 		link: "https://github.com/msaouab/BootCamp-React-projects-js-ts",
 		img: "",
 		technologies: ["JavaScript", "TypeScript", "ReactJs"],
+	},
+	{
+		name: "GIFs API Project",
+		link: "https://msaouab-gifsproject.netlify.app/",
+		img: GifApi,
+		technologies: ["TypeScript", "ReactJs"],
 	},
 ];
 

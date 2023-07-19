@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import OverView from "/Overview.jpg";
+import Testing from "/src/assets/ProjectsImg/TestingGIF.gif";
 
 const CradsContainer = styled.div`
 	display: flex;
@@ -41,10 +42,19 @@ const CradsContainer = styled.div`
 `;
 
 const ProjectsCard = (project: any, key: number) => {
-	const { name, technologies, img, link } = project.project;
+	const { name, img, link } = project.project;
+	const [findImg, setFindImg] = useState<string>("");
+
+	useEffect(() => {
+		if (!img)
+			setFindImg(Testing);
+		else
+			setFindImg(img);
+	}, [img]);
+
 	return (
 		<CradsContainer>
-			<img src={OverView} alt={name} />
+			<img src={findImg} alt={name} />
 			<a className="project-tile" href={link} target="_blank">
 				<p className="project-title">
 					<span className="code">&lt; </span>
