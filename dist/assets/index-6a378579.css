@@ -1,0 +1,1 @@
+@import"https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap";:root{font-family:Courier Prime;background-color:#242020}@tailwind base;@tailwind components;@tailwind utilities;*{margin:0;padding:0}body{overflow-x:hidden}.debug{border:1px solid red}.debug>*{border:1px solid green}.debug>*>*{border:1px solid white}
