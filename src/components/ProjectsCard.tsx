@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Testing from "/src/assets/ProjectsImg/TestingGIF.gif";
+import Testing from "../assets/ProjectsImg/TestingGIF.gif";
 
 const CradsContainer = styled.div`
 	display: flex;
