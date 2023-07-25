@@ -8,10 +8,6 @@ const listNav = [
 		link: "/",
 		name: "About Me",
 	},
-	// {
-	// 	link: "/contact",
-	// 	name: "Contact Me",
-	// },
 	{
 		link: "/edu",
 		name: "Education",
@@ -20,10 +16,6 @@ const listNav = [
 		link: "/project",
 		name: "Projects",
 	},
-	// {
-	// 	link: "/work",
-	// 	name: "Work Experience",
-	// },
 ];
 
 const NavBarContainer = styled.nav`
@@ -50,12 +42,12 @@ const NavBarContainer = styled.nav`
 			text-decoration: none;
 			color: rgba(255, 255, 255, 0.8);
 			border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+			transition: all 0.3s ease-in-out;
 		}
 		& > a:hover {
 			color: rgba(255, 255, 255, 1);
 			border-bottom: 2px solid rgba(255, 255, 255, 1);
 			transform: scale(1.1);
-			transition: all 0.3s ease;
 		}
 		& > a.active {
 			color: rgba(255, 255, 255, 1);

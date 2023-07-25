@@ -22,7 +22,7 @@ const BottomNav = styled.div`
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			cursor: pointer;
+			cursor: crosshair;
 			& > svg {
 				width: 10px;
 				height: 10px;
@@ -43,6 +43,21 @@ const BottomNav = styled.div`
 		height: 0.15rem;
 		background-color: white;
 		cursor: text;
+	}
+	@media (max-width: 1024px) {
+		.Bottomline {
+			width: 90%;
+		}
+	}
+	@media (max-width: 768px) {
+		flex-direction: column-reverse;
+		gap: 1rem;
+		justify-content: center;
+		align-items: center;
+		margin-left: 0;
+		& > .Bottomline {
+			width: 90%;
+		}
 	}
 `;
 

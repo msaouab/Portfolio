@@ -16,8 +16,10 @@ const SideBar = styled.div`
 		display: flex;
 		align-items: center;
 		padding: 0 1rem;
+		transition: background-color 1s ease-in-out;
 	}
-	& > .technologies:hover {
+	& > .technologies:hover, .technologies.active {
+		transition: background-color 0.5s ease-in-out;
 		background-color: #eaeaea;
 		color: #000;
 		cursor: pointer;
@@ -34,7 +36,7 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 	technologies,
 	onSelectTech,
 }) => {
-	const [activeLink, setActiveLink] = useState(0);
+	const [activeLink, setActiveLink] = useState(-1);
 
 	const handleSelect = (index: number) => {
 		setActiveLink(index);

@@ -1,5 +1,6 @@
 import trans from '/Overview.jpg'
 import GifApi from '/src/assets/ProjectsImg/GifsAPi.png'
+import Inception from '/src/assets/ProjectsImg/inception.gif'
 
 const Technologies = [
 	"C / Cpp",
@@ -35,7 +36,7 @@ const projects = [
 	{
 		name: "Inception",
 		link: "https://github.com/msaouab/Inception",
-		img: "",
+		img: Inception,
 		technologies: ["DevOps"],
 		description: "",
 	},

@@ -18,6 +18,7 @@ const CardsContainer = styled.div`
 			width: 100%;
 			height: 90%;
 			object-fit: cover;
+			object-position: top;
 		}
 		background-color: #694538;
 		& > .project-tile {
