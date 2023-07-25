@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import itsme from "/me.jpg";
-import SocialMedia from "./components/SocialMedia";
-import TextProfile from "./components/TextProfile";
 import { useEffect, useState } from "react";
+import SocialMedia from "../components/SocialMedia";
+import TextProfile from "../components/TextProfile";
+import ProfileImage from "../components/ProfileImage";
 
 const ProfileContainer = styled.main`
 	display: flex;
@@ -27,23 +27,6 @@ const ProfileContainer = styled.main`
 		& > h2 {
 			font-size: 1rem;
 		}
-	}
-`;
-
-const ProfileImage = styled.div`
-	background-image: url(${itsme});
-	background-size: cover;
-	width: 300px;
-	height: 300px;
-	border-radius: 50%;
-	border: 4px solid rgba(128, 128, 128, 0.5);
-	@media (max-width: 768px) {
-		width: 200px;
-		height: 200px;
-	}
-	@media (max-width: 425px) {
-		width: 150px;
-		height: 150px;
 	}
 `;
 

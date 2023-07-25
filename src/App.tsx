@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Profile from "./Profile";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import styled from "styled-components";
-import Edu from "./Edu";
-import Projects from "./Projects";
 import { useEffect } from "react";
+import Profile from "./pages/Profile";
+import Edu from "./pages/Edu";
+import Projects from "./pages/Projects";
 
-const AppContainer = styled.div`
-`;
+const AppContainer = styled.div``;
 
 const RoutesContainer = styled.div`
 	display: grid;
@@ -71,10 +69,7 @@ function App() {
 
 	return (
 		<AppContainer>
-			{/* <main> */}
-				<AppRouter />
-			{/* </main> */}
-			{/* <footer><Footer /></footer> */}
+			<AppRouter />
 		</AppContainer>
 	);
 }

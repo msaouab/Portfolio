@@ -53,7 +53,7 @@ const projects = [
 		technologies: ["JavaScript", "TypeScript", "ReactJs"],
 	},
 	{
-		name: "GIFs API Project",
+		name: "Gifs Search Engine",
 		link: "https://msaouab-gifsproject.netlify.app/",
 		img: GifApi,
 		technologies: ["TypeScript", "ReactJs"],

@@ -1,26 +1,18 @@
 import styled from "styled-components";
 import ProjectsCard from "./ProjectsCard";
 
-const ProjectsContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	width: 90%;
-	margin: auto;
-	& > main {
-		width: 100%;
-		align-items: center;
+const ProjectsContainer = styled.main`
+	& > ul {
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		& > ul {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-			gap: 1rem;
-		}
-		& > .notfund {
-			color: #fff;
-			text-align: center;
-			font-size: 1.5rem;
-		}
+		align-items: center;
+		gap: 2rem;
+	}
+	& > .notfund {
+		color: #fff;
+		text-align: center;
+		font-size: 1.5rem;
 	}
 `;
 
@@ -41,17 +33,15 @@ const HeaderProject: React.FC<ProjectsProps> = ({ projects, selected }) => {
 
 	return (
 		<ProjectsContainer>
-			<main>
-				{filterProjects.length > 0 ? (
-					<ul>
-						{filterProjects.map((project, index) => (
-							<ProjectsCard project={project} key={index} />
-						))}
-					</ul>
-				) : (
-					<p className="notfund">No projects found.</p>
-				)}
-			</main>
+			{filterProjects.length > 0 ? (
+				<ul>
+					{filterProjects.map((project, index) => (
+						<ProjectsCard project={project} key={index} />
+					))}
+				</ul>
+			) : (
+				<p className="notfund">No projects found.</p>
+			)}
 		</ProjectsContainer>
 	);
 };

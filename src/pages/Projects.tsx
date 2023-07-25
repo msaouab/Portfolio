@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import HeaderProject from "./components/HeaderProject";
-import SideBarProject from "./components/SideBarProject";
+import SideBarProject from "../components/SideBarProject";
+import HeaderProject from "../components/HeaderProject";
 import { useState } from "react";
-import { Technologies, projects } from "./components/projects/ProjectData";
+import { Technologies, projects } from "../data/ProjectData";
 
 const ProjectContainer = styled.main`
 	display: flex;

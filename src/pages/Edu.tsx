@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import alone from "./assets/alone.jpeg";
-import compus from "./assets/compus.jpeg";
-import compus_kh from "./assets/compus_kh.jpg";
 
 const EduContainer = styled.div`
 	color: white;
@@ -34,9 +31,6 @@ const EduContainer = styled.div`
 	}
 	& > .s2 {
 		border: 3px solid #ffffff;
-		/* display: flex; */
-		/* justify-content: center; */
-		/* flex-wrap: wrap; */
 		gap: 1rem;
 		width: 60%;
 		& > .iframe {
@@ -111,11 +105,6 @@ const Edu = () => {
 						frameBorder="0"
 					></iframe>
 				</div>
-				{/* <article>
-					<img src={alone} alt="" />
-					<img src={compus_kh} alt="" />
-					<img src={compus} alt="" />
-				</article> */}
 			</section>
 		</EduContainer>
 	);
