@@ -55,7 +55,7 @@ const projects = [
 	},
 	{
 		name: "Gifs Search Engine",
-		link: "https://msaouab-gifsproject.netlify.app/",
+		link: "https://takehome-assignment.netlify.app/",
 		img: GifApi,
 		technologies: ["TypeScript", "ReactJs"],
 	},
