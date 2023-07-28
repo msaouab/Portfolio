@@ -70,7 +70,7 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 	onSelectTech,
 }) => {
 	const [activeLink, setActiveLink] = useState(-1);
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 
 	const handleSelect = (index: number) => {
 		setActiveLink(index);

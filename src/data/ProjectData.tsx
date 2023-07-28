@@ -6,6 +6,7 @@ import { FaReact } from 'react-icons/fa';
 import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi';
 import { SiNestjs } from 'react-icons/si';
 import IRC from '/src/assets/ProjectsImg/irc.jpg'
+import Container from '/src/assets/ProjectsImg/container.jpg'
 
 const Technologies = [
 	{
@@ -45,7 +46,7 @@ const Projects = [
 	{
 		name: "ft_Containers",
 		link: "https://github.com/msaouab/ft_Containers",
-		img: "",
+		img: Container,
 		technologies: ["C / Cpp"],
 		description: "",
 	},
