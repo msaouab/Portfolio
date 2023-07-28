@@ -34,7 +34,7 @@ const Technologies = [
 	},
 ];
 
-const projects = [
+const Projects = [
 	{
 		name: "minishell",
 		link: "https://github.com/msaouab/Minishell-42",
@@ -84,4 +84,4 @@ const projects = [
 	},
 ];
 
-export { Technologies, projects };
+export { Technologies, Projects };

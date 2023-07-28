@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SideBarProject from "../components/SideBarProject";
 import HeaderProject from "../components/HeaderProject";
 import { useState } from "react";
-import { Technologies, projects } from "../data/ProjectData";
+import { Technologies, Projects } from "../data/ProjectData";
 
 const ProjectContainer = styled.main`
 	display: flex;
@@ -19,11 +19,11 @@ const Project = () => {
 
 	return (
 		<ProjectContainer>
-				<SideBarProject
-					technologies={Technologies}
-					onSelectTech={handleSelect}
-				/>
-				<HeaderProject projects={projects} selected={selected} />
+			<SideBarProject
+				technologies={Technologies}
+				onSelectTech={handleSelect}
+			/>
+			<HeaderProject projects={Projects} selected={selected} />
 		</ProjectContainer>
 	);
 };

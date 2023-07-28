@@ -18,7 +18,10 @@ const ProjectsContainer = styled.main`
 
 interface Project {
 	name: string;
+	link: string;
+	img: string;
 	technologies: string[];
+	description: string;
 }
 
 interface ProjectsProps {

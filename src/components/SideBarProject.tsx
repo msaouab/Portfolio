@@ -57,7 +57,7 @@ const StyledListItemIcon = styled(ListItemIcon)`
 
 interface Technology {
 	name: string;
-	icon: string;
+	icon: any;
 }
 
 interface TechnologiesProps {
