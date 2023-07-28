@@ -1,14 +1,37 @@
 import trans from '/Overview.jpg'
 import GifApi from '/src/assets/ProjectsImg/GifsAPi.png'
 import Inception from '/src/assets/ProjectsImg/inception.gif'
+import { Code, Computer } from '@mui/icons-material';
+import { FaReact } from 'react-icons/fa';
+import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi';
+import { SiNestjs } from 'react-icons/si';
+import IRC from '/src/assets/ProjectsImg/irc.jpg'
 
 const Technologies = [
-	"C / Cpp",
-	"DevOps",
-	"JavaScript",
-	"TypeScript",
-	"ReactJs",
-	"NestJs",
+	{
+		name: "C / Cpp",
+		icon: <Code />,
+	},
+	{
+		name: "DevOps",
+		icon: <Computer />,
+	},
+	{
+		name: "JavaScript",
+		icon: <BiLogoJavascript />,
+	},
+	{
+		name: "TypeScript",
+		icon: <BiLogoTypescript />,
+	},
+	{
+		name: "ReactJs",
+		icon: <FaReact />,
+	},
+	{
+		name: "NestJs",
+		icon: <SiNestjs />,
+	},
 ];
 
 const projects = [
@@ -29,7 +52,7 @@ const projects = [
 	{
 		name: "ft_IRC",
 		link: "https://github.com/msaouab/ft_irc",
-		img: "",
+		img: IRC,
 		technologies: ["C / Cpp"],
 		description: "",
 	},
