@@ -10,11 +10,11 @@ const ProfileContainer = styled.main`
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	color: white;
+	color: var(--text-color);
 	& > hr {
 		width: 3rem;
 		height: 0.1rem;
-		background-color: white;
+		background-color: var(--text-color);
 		border-radius: 1rem;
 	}
 	& > h1 {

@@ -2,7 +2,10 @@
 
 :root {
 	font-family: Courier Prime;
-	background-color: #242020;
+	--primary-color: white;
+	--secondary-color: #91C8E4;
+	--header-color: #749BC2;
+	--text-color: #4682A9;
 }
 
 @tailwind base;
@@ -16,6 +19,7 @@
 
 body {
 	overflow-x: hidden;
+	background-color: var(--primary-color);
 }
 
 .debug {

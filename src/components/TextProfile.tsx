@@ -11,9 +11,9 @@ const TextContainer = styled.article`
 	line-height: 1.3rem;
 	& > p {
 		& > a {
-			color: #00ff00;
+			color: #ff5f56;
 			text-decoration: none;
-			border-bottom: 1px solid #00ff00;
+			border-bottom: 1px solid #ff5f56;
 		}
 	}
 	@media (max-width: 768px) {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const EduContainer = styled.div`
-	color: white;
+	color: var(--text-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,19 +13,14 @@ const EduContainer = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		width: 60%;
-		& > h1 {
-			color: #ffffff;
-		}
 		& > h2 {
-			color: #dcd4d4;
 			font-size: 1rem;
 		}
 		& > p {
-			color: #dad5d5;
 			& > a {
-				color: #00ff00;
+				color: rgb(163, 222, 131);
 				text-decoration: none;
-				border-bottom: 1px solid #00ff00;
+				border-bottom: 1px solid rgb(163, 222, 131);
 			}
 		}
 	}

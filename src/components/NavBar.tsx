@@ -27,7 +27,7 @@ const NavBarContainer = styled.nav`
 	& > .Topline {
 		width: 40%;
 		height: 0.15rem;
-		background-color: white;
+		background-color: var(--text-color);
 		cursor: text;
 	}
 	& > .button {
@@ -40,18 +40,18 @@ const NavBarContainer = styled.nav`
 		& > a {
 			text-align: center;
 			text-decoration: none;
-			color: rgba(255, 255, 255, 0.8);
+			color: var(--text-color);
 			border-bottom: 2px solid rgba(255, 255, 255, 0.7);
 			transition: all 0.3s ease-in-out;
 		}
 		& > a:hover {
-			color: rgba(255, 255, 255, 1);
-			border-bottom: 2px solid rgba(255, 255, 255, 1);
+			color: var(--text-color);
+			border-bottom: 2px solid rgba(70, 130, 169, 0.7);
 			transform: scale(1.1);
 		}
 		& > a.active {
-			color: rgba(255, 255, 255, 1);
-			border-bottom: 2px solid rgba(255, 255, 255, 1);
+			color: var(--text-color);
+			border-bottom: 2px solid var(--text-color);
 		}
 	}
 	@media (max-width: 1024px) {
@@ -90,9 +90,9 @@ const NavBarContainer = styled.nav`
 				top: 2.8rem;
 				right: 1.6rem;
 				width: 10rem;
-				background-color: #242020;
+				background-color: var(--primary-color);
 				& > a {
-					color: #fff;
+					color: var(--text-color);
 					height: 2rem;
 				}
 				& > :first-child {

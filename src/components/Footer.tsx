@@ -41,7 +41,7 @@ const BottomNav = styled.div`
 	& > .Bottomline {
 		width: 40%;
 		height: 0.15rem;
-		background-color: white;
+		background-color: var(--text-color);
 		cursor: text;
 	}
 	@media (max-width: 1024px) {

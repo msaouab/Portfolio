@@ -9,7 +9,7 @@ const SocialMediaContainer = styled.div`
 	gap: 1rem;
 	padding: 1rem;
 	& > a {
-		color: white;
+		color: var(--text-color);
 		border: 1px solid white;
 		border-radius: 50%;
 		transition: border-radius 0.35s, transform 0.35s;
