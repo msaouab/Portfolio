@@ -12,7 +12,7 @@ const SideBar = styled.div`
 	& > Button {
 		--b: 3px;
 		--s: 0.45em;
-		--color: #ffffff;
+		--color: var(--text-color);
 
 		padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
 		color: var(--color);
@@ -50,8 +50,10 @@ const SideBar = styled.div`
 
 const StyledListItemIcon = styled(ListItemIcon)`
 	& > svg {
-		fill: white;
-		color: white;
+		fill: var(--text-color);
+		color: var(--text-color);
+		width: 22px;
+		height: 22px;
 	}
 `;
 
@@ -79,7 +81,9 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 
 	const getList = () => (
 		<div
-			style={{ width: 250 }}
+			style={{
+				width: 200,
+			}}
 			className="list"
 			onClick={() => setOpen(false)}
 		>
@@ -107,9 +111,10 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 				className="drawer"
 				PaperProps={{
 					sx: {
-						backgroundColor: "#242020",
-						color: "white",
+						backgroundColor: "white",
+						color: "#4682A9",
 						justifyContent: "space-around",
+						paddingLeft: "2rem",
 					},
 				}}
 			>

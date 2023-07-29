@@ -10,7 +10,7 @@ const ProjectsContainer = styled.main`
 		gap: 2rem;
 	}
 	& > .notfund {
-		color: #fff;
+		color: var(--text-color);
 		text-align: center;
 		font-size: 1.5rem;
 	}
