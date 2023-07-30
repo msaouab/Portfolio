@@ -45,27 +45,6 @@ const listSocialmedia = [
 		cls: "Twitter",
 		icon: <TwitterIcon />,
 	},
-	{
-		id: 4,
-		link: "https://www.instagram.com/themedsaouab/",
-		name: "Instagram",
-		cls: "Instagram",
-		icon: <InstagramIcon />,
-	},
-	{
-		id: 5,
-		link: "https://wa.me/qr/EUWI4W2PDJJOF1",
-		name: "Whatsapp",
-		cls: "Whatsapp",
-		icon: <WhatsappIcon />,
-	},
-	{
-		id: 6,
-		link: "https://wa.me/qr/EUWI4W2PDJJOF1",
-		name: "Telegram",
-		cls: "Telegram",
-		icon: <TelegramIcon />,
-	},
 ];
 
 export default listSocialmedia;

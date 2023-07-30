@@ -37,13 +37,6 @@ const Technologies = [
 
 const Projects = [
 	{
-		name: "minishell",
-		link: "https://github.com/msaouab/Minishell-42",
-		img: "",
-		technologies: ["C / Cpp"],
-		description: "",
-	},
-	{
 		name: "ft_Containers",
 		link: "https://github.com/msaouab/ft_Containers",
 		img: Container,

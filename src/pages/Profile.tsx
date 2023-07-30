@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import SocialMedia from "../components/SocialMedia";
 import TextProfile from "../components/TextProfile";
 import ProfileImage from "../components/ProfileImage";
+import SideBarProject from "../components/SideBarProject";
+import { Technologies } from "../data/ProjectData";
 
 const ProfileContainer = styled.main`
 	display: flex;
@@ -46,6 +48,11 @@ export const TypingText = ({ text }: { text: string }) => {
 };
 
 const Profile = () => {
+	const [selected, setSelected] = useState<string | null>(null);
+
+	const handleSelect = (technology: string) => {
+		setSelected(technology);
+	};
 	return (
 		<ProfileContainer>
 			<ProfileImage />
@@ -54,8 +61,11 @@ const Profile = () => {
 			</h1>
 			<h2 className="">Software Engineer</h2>
 			<hr className="" />
-			<SocialMedia />
 			<TextProfile />
+			<SideBarProject
+				technologies={Technologies}
+				onSelectTech={handleSelect}
+			/>
 		</ProfileContainer>
 	);
 };

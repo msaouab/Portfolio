@@ -38,7 +38,6 @@ function AppRouter() {
 				<main>
 					<Routes>
 						<Route path="/" element={<Profile />} />
-						<Route path="/edu" element={<Edu />} />
 						<Route path="/project" element={<Projects />} />
 					</Routes>
 				</main>

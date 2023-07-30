@@ -1,7 +1,16 @@
-import { Button, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import {
+	Box,
+	Button,
+	Divider,
+	List,
+	ListItem,
+	ListItemIcon,
+	ListItemText,
+} from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import React, { useState } from "react";
 import styled from "styled-components";
+import SocialMedia from "./SocialMedia";
 
 const SideBar = styled.div`
 	display: flex;
@@ -80,30 +89,37 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 	};
 
 	const getList = () => (
-		<div
-			style={{
-				width: 200,
-			}}
-			className="list"
-			onClick={() => setOpen(false)}
-		>
-			{technologies.map((item, index) => (
-				<ListItem
-					button
-					key={index}
-					onClick={() => handleSelect(index)}
-					className="list-item"
-				>
-					<StyledListItemIcon>{item.icon}</StyledListItemIcon>
-					<ListItemText primary={item.name} />
-				</ListItem>
-			))}
-		</div>
+		<Box>
+			<List
+				style={{
+					width: 200,
+				}}
+				className="list"
+				onClick={() => setOpen(false)}
+			>
+				{technologies.map((item, index) => (
+					<ListItem
+						button
+						key={index}
+						onClick={() => handleSelect(index)}
+						className="list-item"
+					>
+						<StyledListItemIcon>{item.icon}</StyledListItemIcon>
+						<ListItemText primary={item.name} />
+					</ListItem>
+				))}
+			</List>
+			<Divider />
+			<List>
+				<SocialMedia/>
+			</List>
+			<Divider />
+		</Box>
 	);
 
 	return (
 		<SideBar>
-			<Button onClick={() => setOpen(true)}>Check The Techonology</Button>
+			<Button onClick={() => setOpen(true)}>Check The Projects</Button>
 			<Drawer
 				open={open}
 				anchor={"left"}
@@ -114,7 +130,6 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 						backgroundColor: "white",
 						color: "#4682A9",
 						justifyContent: "space-around",
-						paddingLeft: "2rem",
 					},
 				}}
 			>

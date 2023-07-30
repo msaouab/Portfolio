@@ -9,10 +9,6 @@ const listNav = [
 		name: "About Me",
 	},
 	{
-		link: "/edu",
-		name: "Education",
-	},
-	{
 		link: "/project",
 		name: "Projects",
 	},
