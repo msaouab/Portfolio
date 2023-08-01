@@ -128,7 +128,7 @@ const NavBar = () => {
 				<Hamburger
 					toggled={isOpen}
 					toggle={handleToggle}
-					color="#fff"
+					color="#000"
 					duration={0.8}
 					rounded
 				/>
