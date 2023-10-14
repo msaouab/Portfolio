@@ -4,7 +4,8 @@ import SocialMedia from "../components/SocialMedia";
 import TextProfile from "../components/TextProfile";
 import ProfileImage from "../components/ProfileImage";
 import SideBarProject from "../components/SideBarProject";
-import { Technologies } from "../data/ProjectData";
+import { Projects, Technologies } from "../data/ProjectData";
+import HeaderProject from "../components/HeaderProject";
 
 const ProfileContainer = styled.main`
 	display: flex;
@@ -66,6 +67,7 @@ const Profile = () => {
 				technologies={Technologies}
 				onSelectTech={handleSelect}
 			/>
+			<HeaderProject projects={Projects} selected={selected} />
 		</ProfileContainer>
 	);
 };

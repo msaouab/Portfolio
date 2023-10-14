@@ -18,8 +18,6 @@ const SocialMediaContainer = styled.div`
 		align-items: center;
 		justify-content: center;
 		gap: 0.3rem;
-		width: 35px;
-		aspect-ratio: 1;
 	}
 	& > a:hover {
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -31,7 +29,7 @@ const SocialMediaContainer = styled.div`
 const SocialMedia = () => {
 
 	return (
-		<SocialMediaContainer className="">
+		<SocialMediaContainer>
 			{ListSocialmedia.map((elem, index) => {
 				const { icon, link } = elem;
 				return (

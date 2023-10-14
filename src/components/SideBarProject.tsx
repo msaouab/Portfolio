@@ -58,6 +58,9 @@ const SideBar = styled.div`
 `;
 
 const StyledListItemIcon = styled(ListItemIcon)`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	& > svg {
 		fill: var(--text-color);
 		color: var(--text-color);
@@ -92,7 +95,7 @@ const SideBarProject: React.FC<TechnologiesProps> = ({
 		<Box>
 			<List
 				style={{
-					width: 200,
+					width: 300,
 				}}
 				className="list"
 				onClick={() => setOpen(false)}
