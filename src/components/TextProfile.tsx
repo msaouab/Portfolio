@@ -21,29 +21,33 @@ const TextContainer = styled.article`
 `;
 
 const TextProfile = () => {
-
 	return (
 		<TextContainer className="">
 			<p>
-				I'm SAOUAB Mohamed Full-Stack Developer at @ Alpha10X, Student at 1337 Coding School khouribga - Um6p (42
-				Network)
+				I'm SAOUAB Mohamed, a Full-Stack Developer at Alpha10X, and a
+				student at 1337 Coding School in Khouribga - UM6P (42 Network),
+				Morocco.
 			</p>
-			<p>
-				I recently started working to build my career and publish my recent
-				projects here. If you like to find out more about this coding school and
-				its exceptional education model:{" "}
-				<a href="https://1337.ma/en/" target="_blanc" rel="noopener noreferrer">
+			<p>I build digital experiences, and I love what I do.
+				I recently started working to build my career and publish my
+				recent projects here. If you would like to find out more about
+				this coding school and its exceptional education model:{" "}
+				<a
+					href="https://1337.ma/en/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					1337 Coding School
-				</a>
-				! or{" "}
+				</a>{" "}
+				or{" "}
 				<a
 					href="https://42.fr/en/homepage/"
-					target="_blanc"
+					target="_blank"
 					rel="noopener noreferrer"
 				>
 					42 School
 				</a>
-				!
+				.
 			</p>
 		</TextContainer>
 	);

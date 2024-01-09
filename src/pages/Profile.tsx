@@ -74,6 +74,7 @@ const TypingText = ({
 
 const Profile = () => {
 	const [showGif, setShowGif] = useState(false);
+
 	const handleTypingFinish = () => {
 		setShowGif(true);
 	};
