@@ -63,11 +63,11 @@ const Profile = () => {
 			<h2 className="">Software Engineer</h2>
 			<hr className="" />
 			<TextProfile />
-			<SideBarProject
+			{/* <SideBarProject
 				technologies={Technologies}
 				onSelectTech={handleSelect}
 			/>
-			<HeaderProject projects={Projects} selected={selected} />
+			<HeaderProject projects={Projects} selected={selected} /> */}
 		</ProfileContainer>
 	);
 };

@@ -23,25 +23,13 @@ interface Project {
 
 interface ProjectsProps {
 	projects: Project[];
-	selected: string | null;
 }
 
-const HeaderProject: React.FC<ProjectsProps> = ({ projects, selected }) => {
-	const filterProjects = selected
-		? projects.filter((project) => project.technologies.includes(selected))
-		: projects;
+const HeaderProject: React.FC<ProjectsProps> = ({ projects }) => {
 
 	return (
 		<ProjectsContainer>
-			{filterProjects.length > 0 ? (
-				<ul>
-					{filterProjects.map((project, index) => (
-						<ProjectsCard project={project} key={index} />
-					))}
-				</ul>
-			) : (
-				<p className="notfund">No projects found.</p>
-			)}
+			
 		</ProjectsContainer>
 	);
 };

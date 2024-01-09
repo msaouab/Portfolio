@@ -1,92 +1,45 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Testing from "../assets/ProjectsImg/testingGIf.gif";
-import Skeleton from "@mui/material/Skeleton";
-import Stack from "@mui/material/Stack";
+import { ImgContainer } from "./ImgContainer";
+import { SkillsCard } from "./SkillsCard";
 
 const CardsContainer = styled.div`
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	color: #fff;
-	& > .cards {
-		border: 3px solid #ffffff;
-		width: 400px;
-		height: 300px;
-		& > img {
-			width: 100%;
-			height: 90%;
-			object-fit: cover;
-			object-position: top;
+	text-align: center;
+	gap: 2rem;
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	border-radius: 1rem;
+	& > .projectInfo {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		& > .projectName {
 		}
-		background-color: #694538;
-		& > .project-tile {
-			width: 400px;
-			text-align: center;
-			color: #fff;
-			text-decoration: none;
-			padding: 0.8rem 0;
-			.code {
-				color: transparent;
-				transition: color 0.3s ease-out;
-				margin: 0 0.2rem;
-			}
-		}
-		& > .project-tile:hover .code {
-			color: orange;
-		}
-	}
-	@media (max-width: 500px) {
-		.cards {
-			width: 90%;
+		& > .projectDescription {
 		}
 	}
 `;
 
 const ProjectsCard = (project: any, key: number) => {
-	const { name, img, link } = project.project;
-	const [findImg, setFindImg] = useState<string>("");
-	const [loading, setLoading] = useState<boolean>(true);
+	const { name, image, link, icon, description, skills } = project.project;
 
-	useEffect(() => {
-		if (!img) setFindImg(Testing);
-		else setFindImg(img);
-	}, [img]);
-
-	const handleLoad = () => {
-		setLoading(false);
-	};
-	const handleError = () => {
-		setLoading(true);
-		setFindImg(Testing);
-	};
+	// console.log(project);
 
 	return (
-		<CardsContainer>
-			{loading && (
-				<Stack spacing={1}>
-					<Skeleton
-						variant="rounded"
-						width={400}
-						height={300}
-					></Skeleton>
-				</Stack>
-			)}
-			<div
-				onLoad={handleLoad}
-				onError={handleError}
-				className="cards"
-				style={{ display: loading ? "none" : "block" }}
-			>
-				<img src={findImg} alt={name} />
-				<a className="project-tile" href={link} target="_blank">
-					<p className="project-title">
-						<span className="code">&lt; </span>
-						{name}
-						<span className="code"> &#47;&gt;</span>
-					</p>
-				</a>
+		<CardsContainer className="">
+			<ImgContainer source={image} alt={name} />
+			<div className="projectInfo">
+				<h3 className="projectName">
+					{name} <span className="icon">{icon}</span>
+				</h3>
+				<p className="projectDescription">{description}</p>
+				<SkillsCard skills={skills}></SkillsCard>
 			</div>
 		</CardsContainer>
 	);
