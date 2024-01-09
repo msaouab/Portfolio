@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import SocialMedia from "../components/SocialMedia";
 import TextProfile from "../components/TextProfile";
 import ProfileImage from "../components/ProfileImage";
-import SideBarProject from "../components/SideBarProject";
-import { Projects, Technologies } from "../data/ProjectData";
-import HeaderProject from "../components/HeaderProject";
 
 const ProfileContainer = styled.main`
 	display: flex;
@@ -22,6 +18,12 @@ const ProfileContainer = styled.main`
 	}
 	& > h1 {
 		text-align: center;
+		font-family: var(--font-name);
+		& > img {
+			width: 2.4rem;
+			height: 2.4rem;
+			margin-left: 0.5rem;
+		}
 	}
 	@media (max-width: 768px) {
 		& > h1 {
@@ -31,9 +33,28 @@ const ProfileContainer = styled.main`
 			font-size: 1rem;
 		}
 	}
+	@media (max-width: 400px) {
+		& > h1 {
+			font-size: 1rem;
+			& > img {
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-left: 0.5rem;
+			}
+		}
+		& > h2 {
+			font-size: 0.8rem;
+		}
+	}
 `;
 
-export const TypingText = ({ text }: { text: string }) => {
+const TypingText = ({
+	text,
+	onFinishTyping,
+}: {
+	text: string;
+	onFinishTyping: () => void;
+}) => {
 	const [typedText, setTypedText] = useState("");
 	const [currentText, setCurrentText] = useState(0);
 
@@ -42,32 +63,38 @@ export const TypingText = ({ text }: { text: string }) => {
 			setTypedText((prev) => prev + text[currentText]);
 			setCurrentText((prev) => prev + 1);
 		}, 70);
-		if (currentText === text.length) clearInterval(interval);
+		if (currentText === text.length) {
+			clearInterval(interval);
+			onFinishTyping();
+		}
 		return () => clearInterval(interval);
 	}, [text, currentText]);
 	return <>{typedText}</>;
 };
 
 const Profile = () => {
-	const [selected, setSelected] = useState<string | null>(null);
-
-	const handleSelect = (technology: string) => {
-		setSelected(technology);
+	const [showGif, setShowGif] = useState(false);
+	const handleTypingFinish = () => {
+		setShowGif(true);
 	};
+
 	return (
 		<ProfileContainer>
-			<ProfileImage />
 			<h1 className="">
-				<TypingText text="Hi, I'm SAOUAB Mohamed" />
+				<TypingText
+					text="Hi, I'm SAOUAB Mohamed"
+					onFinishTyping={handleTypingFinish}
+				/>
+				{showGif && (
+					<img
+						src="https://user-images.githubusercontent.com/49567393/149633910-977f6211-103e-4220-b74d-8bf8cd9a896f.gif"
+						alt=""
+					/>
+				)}
 			</h1>
-			<h2 className="">Software Engineer</h2>
+			<ProfileImage />
 			<hr className="" />
 			<TextProfile />
-			{/* <SideBarProject
-				technologies={Technologies}
-				onSelectTech={handleSelect}
-			/>
-			<HeaderProject projects={Projects} selected={selected} /> */}
 		</ProfileContainer>
 	);
 };

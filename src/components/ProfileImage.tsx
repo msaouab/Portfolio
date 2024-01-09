@@ -16,6 +16,10 @@ const ImgStyle = styled.div`
 		object-position: top;
 		border-radius: 50%;
 	}
+	@media (max-width: 400px) {
+		width: 200px;
+		height: 200px;
+	}
 `;
 
 const ProfileImage = () => {

@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 
 :root {
 	font-family: Courier Prime;
+	--font-name: 'Fuzzy Bubbles', sans-serif;
 	--primary-color: white;
 	--secondary-color: #91C8E4;
 	--header-color: #749BC2;
 	--text-color: #4682A9;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
 	margin: 0;
-    padding: 0;
+	padding: 0;
 }
 
 body {
@@ -22,11 +20,26 @@ body {
 	background-color: var(--primary-color);
 }
 
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--secondary-color);
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}
+
 .debug {
 	border: 1px solid red;
-	& > * {
+
+	&>* {
 		border: 1px solid green;
-		& > * {
+
+		&>* {
 			border: 1px solid blue;
 		}
 	}

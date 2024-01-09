@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const TextContainer = styled.article`
-	width: 40%;
+	width: 520px;
 	height: auto;
 	text-align: center;
 	display: flex;
@@ -26,7 +25,7 @@ const TextProfile = () => {
 	return (
 		<TextContainer className="">
 			<p>
-				I'm SAOUAB Mohamed student at 1337 Coding School khouribga - Um6p (42
+				I'm SAOUAB Mohamed Full-Stack Developer at @ Alpha10X, Student at 1337 Coding School khouribga - Um6p (42
 				Network)
 			</p>
 			<p>

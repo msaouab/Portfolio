@@ -20,7 +20,6 @@ const ImgStyle = styled.div`
 			height: auto;
 			border-radius: 1.7rem;
 			background-color: #76767633;
-			/* overflow: hidden; */
 			box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 			&:hover {
 				transform: translateY(calc(-100% + 350px));
