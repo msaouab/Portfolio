@@ -8,7 +8,7 @@ const ProfileContainer = styled.main`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
+	gap: 2rem;
 	color: var(--text-color);
 	& > hr {
 		width: 3rem;
