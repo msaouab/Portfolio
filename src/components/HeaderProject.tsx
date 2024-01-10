@@ -26,12 +26,7 @@ interface ProjectsProps {
 }
 
 const HeaderProject: React.FC<ProjectsProps> = ({ projects }) => {
-
-	return (
-		<ProjectsContainer>
-			
-		</ProjectsContainer>
-	);
+	return <ProjectsContainer></ProjectsContainer>;
 };
 
 export default HeaderProject;

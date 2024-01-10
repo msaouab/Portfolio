@@ -5,13 +5,13 @@ const ImgStyle = styled.div`
 	width: 50%;
 	padding: 1rem;
 	.ImgBackground {
-		border: 1px solid #000;
-		height: 350px;
+		height: 300px;
 		width: 100%;
 		overflow: hidden;
 		border-radius: 1.7rem;
+		border: 1px solid #76767633;
 		& > img {
-			width: 350px;
+			/* width: 350px; */
 			border-radius: 10px;
 			width: 100%;
 			object-fit: cover;

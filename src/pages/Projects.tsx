@@ -18,7 +18,6 @@ const ProjectContainer = styled.main`
 `;
 
 const Project = () => {
-
 	return (
 		<ProjectContainer>
 			{Projects.length > 0 ? (
