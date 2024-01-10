@@ -13,7 +13,7 @@ const RoutesContainer = styled.div`
 	display: grid;
 	grid-template-rows: 5vh auto 5vh;
 	align-items: center;
-	height: 100vh;
+	height: 100dvh;
 	gap: 2rem;
 	& > header {
 		padding-top: 1rem;

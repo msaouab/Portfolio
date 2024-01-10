@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ImgContainer } from "./ImgContainer";
 import { SkillsCard } from "./SkillsCard";
@@ -100,22 +99,26 @@ const ProjectsCard = (project: any, key: number) => {
 				<p className="projectDescription">{description}</p>
 				<SkillsCard skills={skills}></SkillsCard>
 				<div className="links">
-					<a href={code} target="_blank">
-						<FaGithub />
-						Code
-						<span className="b b1"></span>
-						<span className="b b2"></span>
-						<span className="b b3"></span>
-						<span className="b b4"></span>
-					</a>
-					<a href={demo} target="_blank">
-						<GoLinkExternal />
-						Demo
-						<span className="b b1"></span>
-						<span className="b b2"></span>
-						<span className="b b3"></span>
-						<span className="b b4"></span>
-					</a>
+					{code && (
+						<a href={code} target="_blank">
+							<FaGithub />
+							Code
+							<span className="b b1"></span>
+							<span className="b b2"></span>
+							<span className="b b3"></span>
+							<span className="b b4"></span>
+						</a>
+					)}
+					{demo && (
+						<a href={demo} target="_blank">
+							<GoLinkExternal />
+							Demo
+							<span className="b b1"></span>
+							<span className="b b2"></span>
+							<span className="b b3"></span>
+							<span className="b b4"></span>
+						</a>
+					)}
 				</div>
 			</div>
 		</CardsContainer>

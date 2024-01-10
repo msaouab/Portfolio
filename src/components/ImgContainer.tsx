@@ -14,11 +14,11 @@ const ImgStyle = styled.div`
 			/* width: 350px; */
 			border-radius: 10px;
 			width: 100%;
-			object-fit: cover;
+			object-fit: contain;
+			object-position: center;
 			transform: translateY(0%);
 			transition: transform 10s ease-in-out 0s;
 			height: auto;
-			border-radius: 1.7rem;
 			background-color: #76767633;
 			box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 			&:hover {

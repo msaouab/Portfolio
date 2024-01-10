@@ -9,6 +9,7 @@ import IRC from "/src/assets/ProjectsImg/irc.jpg";
 import Container from "/src/assets/ProjectsImg/container.jpg";
 import { ProjectType } from "../_types/types";
 import CarRental from "/src/assets/ProjectsImg/Car-Rental.png";
+import Ecommerce from "/src/assets/ProjectsImg/Minimalist-Ecommerce.png";
 
 const Technologies = [
 	{
@@ -50,34 +51,15 @@ const Projects: ProjectType[] = [
 		skills: ["ReactJs", "TypeScript"],
 	},
 	{
-		name: "ft_Containers",
-		icon: "",
-		demo: "",
-		code: "https://github.com/msaouab/ft_Containers",
-		image: Container,
-		technologies: ["C / Cpp"],
-		description: "The 'ft_container' project at 42 School involves implementing custom versions of standard C++ containers, such as vectors, lists, stacks, and queues. It aims to enhance students' understanding of data structures, algorithms, and memory management within the context of the C++ Standard Template Library (STL).",
-		skills: ["Cpp"],
-	},
-	{
-		name: "ft_IRC",
-		icon: "",
-		demo: "",
-		code: "https://github.com/msaouab/ft_irc",
-		image: IRC,
-		technologies: ["C / Cpp"],
-		description: "",
-		skills: ["C", "Cpp", "Socket"],
-	},
-	{
-		name: "Inception",
-		icon: "",
-		demo: "",
-		code: "https://github.com/msaouab/Inception",
-		image: Inception,
-		technologies: ["DevOps"],
-		description: "",
-		skills: ["Docker"],
+		name: "Ecommerce",
+		icon: "🛒",
+		demo: "https://e-commerce-msaouab.vercel.app/",
+		code: "https://github.com/msaouab/e-commerce",
+		image: Ecommerce,
+		technologies: [],
+		description:
+			"With a focus on simplicity and clean design, this store prioritize user experience, making it easy for customers to find and purchase the products they need.",
+		skills: ["React", "TypeScript"],
 	},
 	{
 		name: "ft_transcendence",
@@ -90,14 +72,14 @@ const Projects: ProjectType[] = [
 		skills: ["ReactJs", "TypeScript", "NestJs", "Docker"],
 	},
 	{
-		name: "BootCamp Web Dev",
+		name: "Inception",
 		icon: "",
 		demo: "",
-		code: "https://github.com/msaouab/BootCamp-React-projects-js-ts",
-		image: "",
-		technologies: ["JavaScript", "TypeScript", "ReactJs"],
+		code: "https://github.com/msaouab/Inception",
+		image: Inception,
+		technologies: ["DevOps"],
 		description: "",
-		skills: ["ReactJs", "TypeScript", "JavaScript"],
+		skills: ["Docker"],
 	},
 	{
 		name: "Gifs Search Engine",
@@ -109,6 +91,37 @@ const Projects: ProjectType[] = [
 		description: "",
 		skills: ["ReactJs", "TypeScript"],
 	},
+	{
+		name: "ft_IRC",
+		icon: "",
+		demo: "",
+		code: "https://github.com/msaouab/ft_irc",
+		image: IRC,
+		technologies: ["C / Cpp"],
+		description: "",
+		skills: ["C", "Cpp", "Socket"],
+	},
+	{
+		name: "ft_Containers",
+		icon: "",
+		demo: "",
+		code: "https://github.com/msaouab/ft_Containers",
+		image: Container,
+		technologies: ["C / Cpp"],
+		description:
+			"The 'ft_container' project at 42 School involves implementing custom versions of standard C++ containers, such as vectors, lists, stacks, and queues. It aims to enhance students' understanding of data structures, algorithms, and memory management within the context of the C++ Standard Template Library (STL).",
+		skills: ["Cpp"],
+	},
+	// {
+	// 	name: "BootCamp Web Dev",
+	// 	icon: "",
+	// 	demo: "",
+	// 	code: "https://github.com/msaouab/BootCamp-React-projects-js-ts",
+	// 	image: "",
+	// 	technologies: ["JavaScript", "TypeScript", "ReactJs"],
+	// 	description: "",
+	// 	skills: ["ReactJs", "TypeScript", "JavaScript"],
+	// },
 ];
 
 export { Technologies, Projects };

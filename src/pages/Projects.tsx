@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import SideBarProject from "../components/SideBarProject";
-import HeaderProject from "../components/HeaderProject";
-import { useState } from "react";
-import { Technologies, Projects } from "../data/ProjectData";
+import { Projects } from "../data/ProjectData";
 import ProjectsCard from "../components/ProjectsCard";
 
 const ProjectContainer = styled.main`
