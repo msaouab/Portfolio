@@ -24,6 +24,7 @@ const CardsContainer = styled.div`
 		& > .projectName {
 		}
 		& > .projectDescription {
+			color: gray;
 		}
 		& > .links {
 			display: flex;
