@@ -9,7 +9,7 @@ const ProjectContainer = styled.main`
 		justify-content: center;
 		align-items: center;
 		gap: 5rem;
-		max-width: 1000px;
+		max-width: 800px;
 		margin: 0 auto;
 	}
 `;

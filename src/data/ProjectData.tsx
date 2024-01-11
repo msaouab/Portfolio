@@ -2,7 +2,7 @@ import trans from "/Overview.jpg";
 import GifApi from "/src/assets/ProjectsImg/GifsAPi.png";
 import Inception from "/src/assets/ProjectsImg/inception.gif";
 import { Code, Computer } from "@mui/icons-material";
-import { FaReact } from "react-icons/fa";
+import { FaDocker, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
 import IRC from "/src/assets/ProjectsImg/irc.jpg";
@@ -10,6 +10,7 @@ import Container from "/src/assets/ProjectsImg/container.jpg";
 import { NavType, ProjectType } from "../_types/types";
 import CarRental from "/src/assets/ProjectsImg/Car-Rental.png";
 import Ecommerce from "/src/assets/ProjectsImg/Minimalist-Ecommerce.png";
+import ChooseGif from "/src/assets/ProjectsImg/chooseGif.png";
 
 const Technologies = [
 	{
@@ -62,6 +63,17 @@ const Projects: ProjectType[] = [
 		skills: ["React", "TypeScript"],
 	},
 	{
+		name: "Gifs Search Engine",
+		icon: "🔍",
+		demo: "https://gif-engine.msaouab.vercel.app/",
+		code: "https://github.com/msaouab/Choose-your-GIF",
+		image: ChooseGif,
+		technologies: ["ReactJs", "TypeScript"],
+		description:
+			"Choose Gif is a Web Application that allows you to search for gifs and download them.",
+		skills: ["ReactJs", "TypeScript"],
+	},
+	{
 		name: "ft_transcendence",
 		icon: "",
 		demo: "",
@@ -73,7 +85,7 @@ const Projects: ProjectType[] = [
 	},
 	{
 		name: "Inception",
-		icon: "",
+		icon: <FaDocker style={{ color: "#2395EC" }} />,
 		demo: "",
 		code: "https://github.com/msaouab/Inception",
 		image: Inception,
@@ -82,23 +94,14 @@ const Projects: ProjectType[] = [
 		skills: ["Docker"],
 	},
 	{
-		name: "Gifs Search Engine",
-		icon: "",
-		demo: "https://takehome-assignment.netlify.app/",
-		code: "",
-		image: GifApi,
-		technologies: ["TypeScript", "ReactJs"],
-		description: "",
-		skills: ["ReactJs", "TypeScript"],
-	},
-	{
 		name: "ft_IRC",
 		icon: "",
 		demo: "",
 		code: "https://github.com/msaouab/ft_irc",
 		image: IRC,
 		technologies: ["C / Cpp"],
-		description: "",
+		description:
+			"IRC (Internet Relay Chat), a text-based communication protocol on the internet that facilitates real-time communication. In this context, users can engage in direct message exchanges and join group channels. Utilizing IRC clients, I connect to IRC servers, which, in turn, interconnect to create a network.",
 		skills: ["C", "Cpp", "Socket"],
 	},
 	{
@@ -109,7 +112,7 @@ const Projects: ProjectType[] = [
 		image: Container,
 		technologies: ["C / Cpp"],
 		description:
-			"The 'ft_container' project at 42 School involves implementing custom versions of standard C++ containers, such as vectors, lists, stacks, and queues. It aims to enhance students' understanding of data structures, algorithms, and memory management within the context of the C++ Standard Template Library (STL).",
+			"The 'ft_container' project at 42 School entails the development of customized versions of fundamental C++ containers, including vectors, lists, stacks, maps, and sets. Additionally, participants are required to create their own Red/Black Tree. This project is designed to deepen students' comprehension of data structures, algorithms, and memory management within the framework of the C++ Standard Template Library (STL).",
 		skills: ["Cpp"],
 	},
 ];

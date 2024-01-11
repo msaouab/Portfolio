@@ -18,7 +18,7 @@ const CardsContainer = styled.div`
 		width: 50%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		align-items: center;
 		text-align: center;
 		& > .projectName {
@@ -33,53 +33,17 @@ const CardsContainer = styled.div`
 			gap: 1rem;
 			width: 100%;
 			& > a {
-				padding: 1rem;
-				color: var(--text-color);
+				padding: 0.5rem 1rem;
+				color: #000;
 				display: flex;
 				justify-content: center;
 				gap: 0.3rem;
 				text-decoration: none;
 				font-weight: 700;
-				position: relative;
-				& > .b {
-					position: absolute;
-					background: var(--text-color);
-					transition: 0.5s;
-				}
-				& > .b1,
-				.b4 {
-					width: 25%;
-					height: 3px;
-				}
-				& > .b2,
-				.b3 {
-					height: 40%;
-					width: 3px;
-				}
-				& > .b3,
-				.b4 {
-					bottom: 0;
-					right: 0;
-				}
-				& > .b1,
-				.b2 {
-					top: 0;
-					left: 0;
-				}
-
+				transition: text-shadow 0.2s ease-in-out;
 				&:hover {
-					& > .b1,
-					.b4 {
-						width: 100%;
-					}
-					& > .b2,
-					.b3 {
-						height: 100%;
-					}
-				}
-				&:active {
-					transform: scale(1.1);
-					box-shadow: 0.1px 0.1px 2px var(--text-color);
+					color: var(--text-color);
+					text-shadow: 0 10px 0px rgba(0, 0, 0, 0.1);
 				}
 			}
 		}
@@ -90,10 +54,6 @@ const GoTo: React.FC<GoToProps> = ({ url, icon, text }) => (
 	<a href={url} target="_blank">
 		{icon}
 		{text}
-		<span className="b b1"></span>
-		<span className="b b2"></span>
-		<span className="b b3"></span>
-		<span className="b b4"></span>
 	</a>
 );
 

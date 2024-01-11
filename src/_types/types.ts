@@ -1,6 +1,6 @@
 type ProjectType = {
 	name: string;
-	icon: string;
+	icon: string | IconType;
 	description: string;
 	technologies: string[];
 	image: string;
@@ -8,6 +8,8 @@ type ProjectType = {
 	code: string;
 	skills: string[];
 };
+
+type IconType = string | React.ReactNode;
 
 type SkillsProps = {
 	skills: string[];
