@@ -1,4 +1,4 @@
-export type ProjectType = {
+type ProjectType = {
 	name: string;
 	icon: string;
 	description: string;
@@ -9,6 +9,19 @@ export type ProjectType = {
 	skills: string[];
 };
 
-export type SkillsProps = {
+type SkillsProps = {
 	skills: string[];
 };
+
+type NavType = {
+	name: string;
+	path: string;
+};
+
+type GoToProps = {
+	url: string;
+	icon: React.ReactNode;
+	text: string;
+};
+
+export type { ProjectType, SkillsProps, NavType, GoToProps };

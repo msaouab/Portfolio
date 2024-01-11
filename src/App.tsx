@@ -5,9 +5,6 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
-import { Maintenance } from "./components/Maintenance";
-
-const AppContainer = styled.div``;
 
 const RoutesContainer = styled.div`
 	display: grid;
@@ -26,7 +23,6 @@ const RoutesContainer = styled.div`
 	}
 	@media (max-width: 1000px) {
 		& > footer {
-			/* margin-top: 4rem !important; */
 		}
 	}
 	@media (max-width: 500px) {
@@ -75,9 +71,9 @@ function App() {
 	}, []);
 
 	return (
-		<AppContainer>
+		<>
 			<AppRouter />
-		</AppContainer>
+		</>
 	);
 }
 

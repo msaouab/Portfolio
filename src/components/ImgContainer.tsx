@@ -11,7 +11,6 @@ const ImgStyle = styled.div`
 		border-radius: 1.7rem;
 		border: 1px solid #76767633;
 		& > img {
-			/* width: 350px; */
 			border-radius: 10px;
 			width: 100%;
 			object-fit: contain;

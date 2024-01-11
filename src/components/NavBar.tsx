@@ -1,18 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Squash as Hamburger } from "hamburger-react";
-import { Link, NavLink } from "react-router-dom";
-
-const listNav = [
-	{
-		link: "/",
-		name: "About Me",
-	},
-	{
-		link: "/project",
-		name: "Projects",
-	},
-];
+import { NavLink } from "react-router-dom";
+import { listNav } from "../data/ProjectData";
 
 const NavBarContainer = styled.nav`
 	display: flex;
@@ -73,26 +63,36 @@ const NavBarContainer = styled.nav`
 			background: transparent;
 			border: none;
 			cursor: pointer;
+			z-index: 11;
 		}
 		& > nav {
-			display: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			transform: translateX(0);
+			left: -100%;
+			width: 100%;
+			height: 100dvh;
+			transition: transform 0.3s ease-in-out;
+			background-color: #fff;
+			z-index: 10;
 		}
 		&.open {
+			& > .Topline {
+				background-color: transparent;
+			}
 			& > nav {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				position: absolute;
-				top: 2.8rem;
-				right: 1.6rem;
-				width: 10rem;
+				transform: translateX(100%);
 				background-color: var(--primary-color);
 				& > a {
+					font-size: 1.5rem;
+					padding: 1rem 0;
+					text-align: center;
 					color: var(--text-color);
-					height: 2rem;
-				}
-				& > :first-child {
-					margin-top: 1rem;
+					border-bottom: 2px solid var(--text-color);
 				}
 			}
 		}
@@ -104,16 +104,15 @@ const NavBar = () => {
 	const navRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-
 		const handleClickOutside = (event: any) => {
 			if (navRef.current && !navRef.current.contains(event.target)) {
 				setIsOpen(false);
 			}
 		};
 
-		window.addEventListener('click', handleClickOutside);
+		window.addEventListener("click", handleClickOutside);
 		return () => {
-			window.removeEventListener('click', handleClickOutside);
+			window.removeEventListener("click", handleClickOutside);
 		};
 	}, []);
 
@@ -133,11 +132,11 @@ const NavBar = () => {
 					rounded
 				/>
 			</div>
-			<nav className="">
+			<nav>
 				{listNav.map((item, index) => (
 					<NavLink
 						key={index}
-						to={item.link}
+						to={item.path}
 						className={`${
 							location.pathname === "test" ? "active" : ""
 						}`}

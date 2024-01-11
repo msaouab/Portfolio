@@ -74,13 +74,6 @@ const BottomNav = styled.div`
 			}
 		}
 	}
-	@media (max-width: 1024px) {
-		& > .footer {
-			.Bottomline {
-				/* width: 90%; */
-			}
-		}
-	}
 	@media (max-width: 768px) {
 		flex-direction: column-reverse;
 		gap: 1rem;
@@ -90,9 +83,6 @@ const BottomNav = styled.div`
 		padding: 0 2rem;
 		& > .footer {
 			border: 1px solid red;
-			& > .Bottomline {
-				/* width: 90%; */
-			}
 			& > .copyright {
 				flex-direction: column;
 			}

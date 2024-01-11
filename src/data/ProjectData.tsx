@@ -7,7 +7,7 @@ import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
 import IRC from "/src/assets/ProjectsImg/irc.jpg";
 import Container from "/src/assets/ProjectsImg/container.jpg";
-import { ProjectType } from "../_types/types";
+import { NavType, ProjectType } from "../_types/types";
 import CarRental from "/src/assets/ProjectsImg/Car-Rental.png";
 import Ecommerce from "/src/assets/ProjectsImg/Minimalist-Ecommerce.png";
 
@@ -112,16 +112,17 @@ const Projects: ProjectType[] = [
 			"The 'ft_container' project at 42 School involves implementing custom versions of standard C++ containers, such as vectors, lists, stacks, and queues. It aims to enhance students' understanding of data structures, algorithms, and memory management within the context of the C++ Standard Template Library (STL).",
 		skills: ["Cpp"],
 	},
-	// {
-	// 	name: "BootCamp Web Dev",
-	// 	icon: "",
-	// 	demo: "",
-	// 	code: "https://github.com/msaouab/BootCamp-React-projects-js-ts",
-	// 	image: "",
-	// 	technologies: ["JavaScript", "TypeScript", "ReactJs"],
-	// 	description: "",
-	// 	skills: ["ReactJs", "TypeScript", "JavaScript"],
-	// },
 ];
 
-export { Technologies, Projects };
+const listNav: NavType[] = [
+	{
+		path: "/",
+		name: "About Me",
+	},
+	{
+		path: "/project",
+		name: "Projects",
+	},
+];
+
+export { Technologies, Projects, listNav };

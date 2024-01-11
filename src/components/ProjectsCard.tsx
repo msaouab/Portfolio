@@ -3,6 +3,7 @@ import { ImgContainer } from "./ImgContainer";
 import { SkillsCard } from "./SkillsCard";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
+import { GoToProps } from "../_types/types";
 
 const CardsContainer = styled.div`
 	display: flex;
@@ -85,6 +86,17 @@ const CardsContainer = styled.div`
 	}
 `;
 
+const GoTo: React.FC<GoToProps> = ({ url, icon, text }) => (
+	<a href={url} target="_blank">
+		{icon}
+		{text}
+		<span className="b b1"></span>
+		<span className="b b2"></span>
+		<span className="b b3"></span>
+		<span className="b b4"></span>
+	</a>
+);
+
 const ProjectsCard = (project: any, key: number) => {
 	const { name, image, demo, code, icon, description, skills } =
 		project.project;
@@ -100,24 +112,14 @@ const ProjectsCard = (project: any, key: number) => {
 				<SkillsCard skills={skills}></SkillsCard>
 				<div className="links">
 					{code && (
-						<a href={code} target="_blank">
-							<FaGithub />
-							Code
-							<span className="b b1"></span>
-							<span className="b b2"></span>
-							<span className="b b3"></span>
-							<span className="b b4"></span>
-						</a>
+						<GoTo url={code} icon={<FaGithub />} text="Code" />
 					)}
 					{demo && (
-						<a href={demo} target="_blank">
-							<GoLinkExternal />
-							Demo
-							<span className="b b1"></span>
-							<span className="b b2"></span>
-							<span className="b b3"></span>
-							<span className="b b4"></span>
-						</a>
+						<GoTo
+							url={demo}
+							icon={<GoLinkExternal />}
+							text="Demo"
+						/>
 					)}
 				</div>
 			</div>
