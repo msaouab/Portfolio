@@ -15,7 +15,6 @@ const RoutesContainer = styled.div`
 	align-items: center;
 	height: 100dvh;
 	gap: 2rem;
-	margin-top: 3rem;
 	& > header {
 		padding-top: 1rem;
 	}
@@ -26,6 +25,14 @@ const RoutesContainer = styled.div`
 		padding-bottom: 1rem;
 	}
 	@media (max-width: 1000px) {
+		& > footer {
+			/* margin-top: 4rem !important; */
+		}
+	}
+	@media (max-width: 500px) {
+		& > footer {
+			margin-top: 4rem !important;
+		}
 	}
 `;
 
@@ -34,7 +41,6 @@ function AppRouter() {
 		<BrowserRouter>
 			<RoutesContainer>
 				<header>
-					<Maintenance />
 					<NavBar />
 				</header>
 				<main>

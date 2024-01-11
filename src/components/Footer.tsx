@@ -12,6 +12,7 @@ const BottomNav = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 5rem;
 	margin-left: 5%;
 	& > .Points {
 		display: flex;
@@ -41,7 +42,7 @@ const BottomNav = styled.div`
 		}
 	}
 	& > .footer {
-		width: 40%;
+		width: 100%;
 		& > .Bottomline {
 			width: 100%;
 			height: 0.15rem;
@@ -76,7 +77,7 @@ const BottomNav = styled.div`
 	@media (max-width: 1024px) {
 		& > .footer {
 			.Bottomline {
-				width: 90%;
+				/* width: 90%; */
 			}
 		}
 	}
@@ -85,10 +86,15 @@ const BottomNav = styled.div`
 		gap: 1rem;
 		justify-content: center;
 		align-items: center;
-		margin-left: 0;
+		margin: 0;
+		padding: 0 2rem;
 		& > .footer {
+			border: 1px solid red;
 			& > .Bottomline {
-				width: 90%;
+				/* width: 90%; */
+			}
+			& > .copyright {
+				flex-direction: column;
 			}
 		}
 	}
