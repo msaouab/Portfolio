@@ -16,7 +16,6 @@ const CardStyle = styled.div`
 `;
 
 export const SkillsCard = ({ skills }: SkillsProps) => {
-	console.log(skills);
 	return (
 		<CardStyle className="skill">
 			{skills.map((skill: string, index: number) => (

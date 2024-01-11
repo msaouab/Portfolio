@@ -15,6 +15,7 @@ const RoutesContainer = styled.div`
 	align-items: center;
 	height: 100dvh;
 	gap: 2rem;
+	margin-top: 3rem;
 	& > header {
 		padding-top: 1rem;
 	}
