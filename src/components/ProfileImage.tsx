@@ -1,51 +1,37 @@
-import { Skeleton, Stack } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
-import itsme from "/me.jpg";
 
 const ImgStyle = styled.div`
 	width: 300px;
 	height: 300px;
-	border-radius: 50%;
-	border: 6px solid rgba(128, 128, 128, 0.5);
-	& > img {
-		width: 100%;
-		height: 100%;
-		max-width: 100%;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 50%;
-	}
+	border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	border: 4px solid rgba(0, 0, 0, 0.6);
+	animation: profileImg 5s infinite;
+	position: relative;
+	background: url("/me.jpg");
+	background-size: cover;
+	background-position: top;
 	@media (max-width: 400px) {
 		width: 200px;
 		height: 200px;
+	}
+
+	@keyframes profileImg {
+		0% {
+			border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+		}
+		50% {
+			border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+		}
+		100% {
+			border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+		}
 	}
 `;
 
 const ProfileImage = () => {
 	const [loading, setLoading] = useState(true);
-	return (
-		<ImgStyle>
-			{loading && (
-				<Stack spacing={1}>
-					<Skeleton
-						variant="circular"
-						width={300}
-						height={300}
-					></Skeleton>
-				</Stack>
-			)}
-			<img
-				src={itsme}
-				alt="Saouab Mohamed"
-				width={300}
-				height={300}
-				onLoad={() => setLoading(false)}
-				onError={() => setLoading(true)}
-				style={{ display: loading ? "none" : "block" }}
-			/>
-		</ImgStyle>
-	);
+	return <ImgStyle></ImgStyle>;
 };
 
 export default ProfileImage;

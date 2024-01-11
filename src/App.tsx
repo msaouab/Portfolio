@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import styled from "styled-components";
 import { useEffect } from "react";
 import Profile from "./pages/Profile";
-import Edu from "./pages/Edu";
 import Projects from "./pages/Projects";
 import { Maintenance } from "./components/Maintenance";
 
