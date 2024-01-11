@@ -25,6 +25,22 @@ const ProfileContainer = styled.main`
 			margin-left: 0.5rem;
 		}
 	}
+	& > .ProfileImage {
+		width: 300px;
+		height: 300px;
+		border: 4px solid rgba(0, 0, 0, 0.6);
+		animation: profileImg 5s infinite;
+		transition: border-radius 1s ease-in-out;
+		position: relative;
+		background: url("/me.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+		@media (max-width: 400px) {
+			width: 200px;
+			height: 200px;
+		}
+	}
 	@media (max-width: 768px) {
 		& > h1 {
 			font-size: 1.5rem;
@@ -44,6 +60,17 @@ const ProfileContainer = styled.main`
 		}
 		& > h2 {
 			font-size: 0.8rem;
+		}
+	}
+	@keyframes profileImg {
+		0% {
+			border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+		}
+		50% {
+			border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+		}
+		100% {
+			border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 		}
 	}
 `;
@@ -93,7 +120,7 @@ const Profile = () => {
 					/>
 				)}
 			</h1>
-			<ProfileImage />
+			<div className="ProfileImage"></div>
 			<hr className="" />
 			<TextProfile />
 		</ProfileContainer>

@@ -4,9 +4,9 @@ import styled from "styled-components";
 const ImgStyle = styled.div`
 	width: 300px;
 	height: 300px;
-	border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 	border: 4px solid rgba(0, 0, 0, 0.6);
 	animation: profileImg 5s infinite;
+	transition: all 1s ease-in-out;
 	position: relative;
 	background: url("/me.jpg");
 	background-size: cover;
@@ -30,7 +30,6 @@ const ImgStyle = styled.div`
 `;
 
 const ProfileImage = () => {
-	const [loading, setLoading] = useState(true);
 	return <ImgStyle></ImgStyle>;
 };
 
