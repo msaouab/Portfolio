@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Profile from "./pages/Profile";
 import Edu from "./pages/Edu";
 import Projects from "./pages/Projects";
+import { Maintenance } from "./components/Maintenance";
 
 const AppContainer = styled.div``;
 
@@ -33,6 +34,7 @@ function AppRouter() {
 		<BrowserRouter>
 			<RoutesContainer>
 				<header>
+					<Maintenance />
 					<NavBar />
 				</header>
 				<main>

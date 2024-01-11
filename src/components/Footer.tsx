@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
 	AiOutlineArrowsAlt,
 	AiOutlineClose,
 	AiOutlineMinus,
 } from "react-icons/ai";
 import styled from "styled-components";
+import { FiGithub } from "react-icons/fi";
+import { RiLinkedinLine } from "react-icons/ri";
 
 const BottomNav = styled.div`
 	display: flex;
@@ -38,15 +40,44 @@ const BottomNav = styled.div`
 			background-color: #27c93f;
 		}
 	}
-	& > .Bottomline {
+	& > .footer {
 		width: 40%;
-		height: 0.15rem;
-		background-color: var(--text-color);
-		cursor: text;
+		& > .Bottomline {
+			width: 100%;
+			height: 0.15rem;
+			background-color: var(--text-color);
+			cursor: text;
+		}
+		& > .copyright {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: center;
+			gap: 1rem;
+			padding: 0.5rem 1rem 0 0;
+			& > p {
+				font-family: var(--font-name);
+			}
+			& > span {
+				display: flex;
+				gap: 0.3rem;
+				& > a {
+					text-decoration: none;
+					color: #000;
+					font-size: 1rem;
+					cursor: pointer;
+				}
+				& > a:hover {
+					color: var(--secondary-color);
+				}
+			}
+		}
 	}
 	@media (max-width: 1024px) {
-		.Bottomline {
-			width: 90%;
+		& > .footer {
+			.Bottomline {
+				width: 90%;
+			}
 		}
 	}
 	@media (max-width: 768px) {
@@ -55,14 +86,17 @@ const BottomNav = styled.div`
 		justify-content: center;
 		align-items: center;
 		margin-left: 0;
-		& > .Bottomline {
-			width: 90%;
+		& > .footer {
+			& > .Bottomline {
+				width: 90%;
+			}
 		}
 	}
 `;
 
 const Footer = () => {
 	const [hover, setHover] = useState(true);
+	const [currentYear, setCurrentYear] = useState(Number);
 
 	const handleMouseEnter = () => {
 		setHover(true);
@@ -70,6 +104,12 @@ const Footer = () => {
 	const handleMouseLeave = () => {
 		setHover(false);
 	};
+
+	useEffect(() => {
+		const date = new Date();
+		setCurrentYear(date.getFullYear());
+	}, []);
+
 	return (
 		<BottomNav className="">
 			<div
@@ -81,7 +121,23 @@ const Footer = () => {
 				<span className="yellow">{hover && <AiOutlineMinus />}</span>
 				<span className="green">{hover && <AiOutlineArrowsAlt />}</span>
 			</div>
-			<div className="Bottomline" />
+			<div className="footer">
+				<div className="Bottomline"></div>
+				<div className="copyright">
+					<p>Copyright © {currentYear}. All rights are reserved</p>
+					<span>
+						<a href="https://github.com/msaouab" target="_blank">
+							<FiGithub />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/msaouab/"
+							target="_blank"
+						>
+							<RiLinkedinLine />
+						</a>
+					</span>
+				</div>
+			</div>
 		</BottomNav>
 	);
 };
