@@ -1,5 +1,4 @@
 import trans from "/Overview.jpg";
-import GifApi from "/src/assets/ProjectsImg/GifsAPi.png";
 import Inception from "/src/assets/ProjectsImg/inception.gif";
 import { Code, Computer } from "@mui/icons-material";
 import { FaDocker, FaReact } from "react-icons/fa";
@@ -7,7 +6,7 @@ import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
 import IRC from "/src/assets/ProjectsImg/irc.jpg";
 import Container from "/src/assets/ProjectsImg/container.jpg";
-import { NavType, ProjectType } from "../_types/types";
+import { ProjectType } from "../_types/types";
 import CarRental from "/src/assets/ProjectsImg/Car-Rental.png";
 import Ecommerce from "/src/assets/ProjectsImg/Minimalist-Ecommerce.png";
 import ChooseGif from "/src/assets/ProjectsImg/chooseGif.png";
@@ -39,7 +38,7 @@ const Technologies = [
 	},
 ];
 
-const Projects: ProjectType[] = [
+const ProjectsData: ProjectType[] = [
 	{
 		name: "Car Rental",
 		icon: "🚗",
@@ -80,7 +79,8 @@ const Projects: ProjectType[] = [
 		code: "https://github.com/msaouab/ft_transcendence",
 		image: trans,
 		technologies: ["ReactJs", "TypeScript", "NestJs", "DevOps"],
-		description: "",
+		description:
+			"ft_transcendence it's Web Application Build with ReactJs, NestJs, TypeScript and Docker, that allows you to play pong with your friends, and chat with them.",
 		skills: ["ReactJs", "TypeScript", "NestJs", "Docker"],
 	},
 	{
@@ -117,15 +117,4 @@ const Projects: ProjectType[] = [
 	},
 ];
 
-const listNav: NavType[] = [
-	{
-		path: "/",
-		name: "About Me",
-	},
-	{
-		path: "/project",
-		name: "Projects",
-	},
-];
-
-export { Technologies, Projects, listNav };
+export { Technologies, ProjectsData };

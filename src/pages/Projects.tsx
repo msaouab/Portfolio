@@ -1,31 +1,23 @@
 import styled from "styled-components";
-import { Projects } from "../data/ProjectData";
 import ProjectsCard from "../components/ProjectsCard";
+import { ProjectsData } from "../data/ProjectData";
 
 const ProjectContainer = styled.main`
-	ul {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 5rem;
-		max-width: 800px;
-		margin: 0 auto;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	max-width: 800px;
+	margin: 0 auto;
 `;
 
 const Project = () => {
 	return (
 		<ProjectContainer>
-			{Projects.length > 0 ? (
-				<ul>
-					{Projects.map((project, index) => (
-						<ProjectsCard project={project} key={index} />
-					))}
-				</ul>
-			) : (
-				<p className="notfund">No projects found.</p>
-			)}
+			{ProjectsData.map((project, index) => (
+				<ProjectsCard project={project} key={index} />
+			))}
 		</ProjectContainer>
 	);
 };

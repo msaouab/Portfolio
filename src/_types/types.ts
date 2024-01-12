@@ -26,4 +26,15 @@ type GoToProps = {
 	text: string;
 };
 
-export type { ProjectType, SkillsProps, NavType, GoToProps };
+type CarrierType = {
+	img: string;
+	companyName: string;
+	companyLink: string;
+	jobTitle: string;
+	jobPeriod: string;
+	jobLocation: string;
+	jobDescription: string;
+	role: string;
+};
+
+export type { ProjectType, SkillsProps, NavType, GoToProps, CarrierType };

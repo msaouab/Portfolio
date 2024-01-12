@@ -2,16 +2,13 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const ImgStyle = styled.div`
-	width: 50%;
-	padding: 1rem;
 	.ImgBackground {
 		height: 300px;
 		width: 100%;
 		overflow: hidden;
-		border-radius: 1.7rem;
+		border-radius: 8px;
 		border: 1px solid #76767633;
 		& > img {
-			border-radius: 10px;
 			width: 100%;
 			object-fit: contain;
 			object-position: center;
@@ -26,7 +23,8 @@ const ImgStyle = styled.div`
 		}
 	}
 	@media (max-width: 400px) {
-		width: 80%;
+		/* width: 80%; */
+		/* height: 500px; */
 	}
 `;
 

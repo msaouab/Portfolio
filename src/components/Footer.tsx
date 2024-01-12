@@ -82,7 +82,6 @@ const BottomNav = styled.div`
 		margin: 0;
 		padding: 0 2rem;
 		& > .footer {
-			border: 1px solid red;
 			& > .copyright {
 				flex-direction: column;
 			}

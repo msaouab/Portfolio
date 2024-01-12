@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import TextProfile from "../components/TextProfile";
-import ProfileImage from "../components/ProfileImage";
 
 const ProfileContainer = styled.main`
 	display: flex;

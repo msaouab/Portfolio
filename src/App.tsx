@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
+import Carrier from "./pages/Carrier";
 
 const RoutesContainer = styled.div`
 	display: grid;
@@ -43,6 +44,7 @@ function AppRouter() {
 					<Routes>
 						<Route path="/" element={<Profile />} />
 						<Route path="/project" element={<Projects />} />
+						<Route path="/carrier" element={<Carrier />} />
 					</Routes>
 				</main>
 				<footer>

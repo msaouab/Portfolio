@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Squash as Hamburger } from "hamburger-react";
 import { NavLink } from "react-router-dom";
-import { listNav } from "../data/ProjectData";
+import NavData from "../data/NavData";
 
 const NavBarContainer = styled.nav`
 	display: flex;
@@ -133,7 +133,7 @@ const NavBar = () => {
 				/>
 			</div>
 			<nav>
-				{listNav.map((item, index) => (
+				{NavData.map((item, index) => (
 					<NavLink
 						key={index}
 						to={item.path}
