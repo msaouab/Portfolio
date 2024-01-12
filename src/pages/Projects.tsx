@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ProjectsCard from "../components/ProjectsCard";
 import { ProjectsData } from "../data/ProjectData";
+import { Maintenance } from "../components/Maintenance";
 
 const ProjectContainer = styled.main`
 	display: flex;
@@ -15,9 +16,10 @@ const ProjectContainer = styled.main`
 const Project = () => {
 	return (
 		<ProjectContainer>
-			{ProjectsData.map((project, index) => (
+			<Maintenance />
+			{/* {ProjectsData.map((project, index) => (
 				<ProjectsCard project={project} key={index} />
-			))}
+			))} */}
 		</ProjectContainer>
 	);
 };

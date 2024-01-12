@@ -68,8 +68,6 @@ const ProjectsCard = (project: any, key: number) => {
 				<h3 className="projectName">
 					{name} <span className="icon">{icon}</span>
 				</h3>
-				<p className="projectDescription">{description}</p>
-				<SkillsCard skills={skills}></SkillsCard>
 				<div className="links">
 					{code && (
 						<GoTo url={code} icon={<FaGithub />} text="Code" />
@@ -82,6 +80,8 @@ const ProjectsCard = (project: any, key: number) => {
 						/>
 					)}
 				</div>
+				<p className="projectDescription">{description}</p>
+				<SkillsCard skills={skills}></SkillsCard>
 			</div>
 		</CardsContainer>
 	);
