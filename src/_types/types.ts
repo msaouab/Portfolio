@@ -33,7 +33,6 @@ type CarrierType = {
 	jobTitle: string;
 	jobPeriod: string;
 	jobLocation: string;
-	jobDescription: string;
 	role: string;
 };
 

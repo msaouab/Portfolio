@@ -10,12 +10,15 @@ const CardsContainer = styled.div`
 	justify-content: space-between;
 	text-align: center;
 	gap: 2rem;
-	width: 100%;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	border-radius: 1rem;
+	border-radius: 10px;
+	max-width: 1000px;
+	&:first-child {
+		border: 2px solid black;
+	}
 	& > .projectInfo {
+		min-width: 400px;
 		padding: 1rem;
-		width: 50%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -50,13 +53,6 @@ const CardsContainer = styled.div`
 	}
 `;
 
-const GoTo: React.FC<GoToProps> = ({ url, icon, text }) => (
-	<a href={url} target="_blank">
-		{icon}
-		{text}
-	</a>
-);
-
 const ProjectsCard = (project: any, key: number) => {
 	const { name, image, demo, code, icon, description, skills } =
 		project.project;
@@ -68,20 +64,20 @@ const ProjectsCard = (project: any, key: number) => {
 				<h3 className="projectName">
 					{name} <span className="icon">{icon}</span>
 				</h3>
-				<div className="links">
-					{code && (
-						<GoTo url={code} icon={<FaGithub />} text="Code" />
-					)}
-					{demo && (
-						<GoTo
-							url={demo}
-							icon={<GoLinkExternal />}
-							text="Demo"
-						/>
-					)}
-				</div>
 				<p className="projectDescription">{description}</p>
 				<SkillsCard skills={skills}></SkillsCard>
+				<div className="links">
+					{code && (
+						<a href={code} target="_blank">
+							{<FaGithub />} Code
+						</a>
+					)}
+					{demo && (
+						<a href={demo} target="_blank">
+							{<GoLinkExternal />} Demo
+						</a>
+					)}
+				</div>
 			</div>
 		</CardsContainer>
 	);

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { ImgContainer } from "../components/ImgContainer";
 import CarrierData from "../data/CarrierData";
+import { GoLinkExternal } from "react-icons/go";
 
-const CarrierContainer = styled.div`
+const CarrierContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -11,86 +12,64 @@ const CarrierContainer = styled.div`
 	gap: 5rem;
 	margin: 0 auto;
 	& > .carrier {
-		padding: 0 2rem;
+		border: 1px solid #eaeaea;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		align-items: start;
 		gap: 1rem;
-		& > section {
-			width: 100%;
+		& > .companyName {
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			gap: 2rem;
-			& > article {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				gap: 2rem;
-				& > aside {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					& > .companyName {
-						text-decoration: none;
-						color: black;
-						font-size: 1.1rem;
-						font-weight: 900;
-					}
-					& > .jobTitle {
-						font-size: 1.1rem;
-						font-weight: 500;
-					}
-					& > .jobPeriod {
-						font-size: 1rem;
-						font-weight: 500;
-					}
-					& > .jobLocation {
-						font-size: 1rem;
-						font-weight: 500;
-					}
-				}
-				& > .jobDescription {
-					font-size: 1rem;
-					font-weight: 400;
-					line-height: 1.5rem;
-					color: gray;
-				}
+			gap: 0.1rem;
+			color: black;
+			font-size: 1.1rem;
+			font-weight: 900;
+		}
+		& > aside {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			gap: 1rem;
+			& > .jobTitle {
+				font-size: 1.1rem;
+				font-weight: 500;
 			}
+			& > .jobPeriod {
+				font-size: 1rem;
+				font-weight: 500;
+			}
+		}
+		& > .jobRole {
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 1.3;
 		}
 	}
 `;
 
 const Carrier = () => {
 	return (
-		<CarrierContainer>
+		<CarrierContainer className="debug">
 			{CarrierData.map((carrier, index) => (
-				<div className="carrier " key={index}>
+				<article className="carrier" key={index}>
+					<a
+						href={carrier.companyLink}
+						target="_blank"
+						className="companyName"
+					>
+						{carrier.companyName} <GoLinkExternal />
+					</a>
 					<ImgContainer source={carrier.img} />
-					<section>
-						<article>
-							<aside>
-								<a href={carrier.companyLink} target="_blank" className="companyName">
-									{carrier.companyName}
-								</a>
-								<p className="jobTitle">{carrier.jobTitle}</p>
-							</aside>
-							<aside>
-								<p className="jobPeriod">{carrier.jobPeriod}</p>
-								<p className="jobLocation">
-									{carrier.jobLocation}
-								</p>
-							</aside>
-						</article>
-						<article>
-							<p className="jobDescription">
-								{carrier.jobDescription}
-							</p>
-							<p className="jobRole">{carrier.role}</p>
-						</article>
-					</section>
-				</div>
+					<aside>
+						<p className="jobTitle">{carrier.jobTitle}</p>
+						<p className="jobPeriod">{carrier.jobPeriod}</p>
+					</aside>
+					<p className="jobRole">{carrier.role}</p>
+				</article>
 			))}
 		</CarrierContainer>
 	);

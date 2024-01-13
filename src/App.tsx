@@ -43,8 +43,8 @@ function AppRouter() {
 				<main>
 					<Routes>
 						<Route path="/" element={<Profile />} />
-						<Route path="/project" element={<Projects />} />
 						<Route path="/carrier" element={<Carrier />} />
+						<Route path="/project" element={<Projects />} />
 					</Routes>
 				</main>
 				<footer>

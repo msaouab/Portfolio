@@ -80,7 +80,7 @@ const ProjectsData: ProjectType[] = [
 		image: trans,
 		technologies: ["ReactJs", "TypeScript", "NestJs", "DevOps"],
 		description:
-			"ft_transcendence it's Web Application Build with ReactJs, NestJs, TypeScript and Docker, that allows you to play pong with your friends, and chat with them.",
+			"ft_transcendence it's real-time Single Web Application Build with ReactJs TypeScript in front-end and NestJs TypeScript in the Back-end and Docker, that allows you to play pong game with your friends, and chat with them using the web-socket. must user have a profile page and setting page.",
 		skills: ["ReactJs", "TypeScript", "NestJs", "Docker"],
 	},
 	{
@@ -93,28 +93,28 @@ const ProjectsData: ProjectType[] = [
 		description: "",
 		skills: ["Docker"],
 	},
-	{
-		name: "ft_IRC",
-		icon: "",
-		demo: "",
-		code: "https://github.com/msaouab/ft_irc",
-		image: IRC,
-		technologies: ["C / Cpp"],
-		description:
-			"IRC (Internet Relay Chat), a text-based communication protocol on the internet that facilitates real-time communication. In this context, users can engage in direct message exchanges and join group channels. Utilizing IRC clients, I connect to IRC servers, which, in turn, interconnect to create a network.",
-		skills: ["C", "Cpp", "Socket"],
-	},
-	{
-		name: "ft_Containers",
-		icon: "",
-		demo: "",
-		code: "https://github.com/msaouab/ft_Containers",
-		image: Container,
-		technologies: ["C / Cpp"],
-		description:
-			"The 'ft_container' project at 42 School entails the development of customized versions of fundamental C++ containers, including vectors, lists, stacks, maps, and sets. Additionally, participants are required to create their own Red/Black Tree. This project is designed to deepen students' comprehension of data structures, algorithms, and memory management within the framework of the C++ Standard Template Library (STL).",
-		skills: ["Cpp"],
-	},
+	// {
+	// 	name: "ft_IRC",
+	// 	icon: "",
+	// 	demo: "",
+	// 	code: "https://github.com/msaouab/ft_irc",
+	// 	image: IRC,
+	// 	technologies: ["C / Cpp"],
+	// 	description:
+	// 		"IRC (Internet Relay Chat), a text-based communication protocol on the internet that facilitates real-time communication. In this context, users can engage in direct message exchanges and join group channels. Utilizing IRC clients, I connect to IRC servers, which, in turn, interconnect to create a network.",
+	// 	skills: ["C", "Cpp", "Socket"],
+	// },
+	// {
+	// 	name: "ft_Containers",
+	// 	icon: "",
+	// 	demo: "",
+	// 	code: "https://github.com/msaouab/ft_Containers",
+	// 	image: Container,
+	// 	technologies: ["C / Cpp"],
+	// 	description:
+	// 		"The 'ft_container' project at 42 School entails the development of customized versions of fundamental C++ containers, including vectors, lists, stacks, maps, and sets. Additionally, participants are required to create their own Red/Black Tree. This project is designed to deepen students' comprehension of data structures, algorithms, and memory management within the framework of the C++ Standard Template Library (STL).",
+	// 	skills: ["Cpp"],
+	// },
 ];
 
 export { Technologies, ProjectsData };

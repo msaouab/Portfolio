@@ -9,8 +9,6 @@ const CarrierData: CarrierType[] = [
 		jobTitle: "Full-Stack Developer Intern",
 		jobPeriod: "Sep 2023 - Present",
 		jobLocation: "OnSite",
-		jobDescription:
-			"Connect the people, capital, and ideas that promise to solve the world’s greatest challenges.",
 		role: "In Alpha10X, I am currently serving as a full-stack developer intern. My responsibilities encompass both the front-end and back-end development of the platform. For the front end, I am utilizing Angular, while for the back end, I am employing NestJS and Typescript. Additionally, I am actively engaged in database operations, leveraging ElasticSearch and Neo4j. Within the platform, I have constructed custom tables and implemented a design pattern for charts using the Highcharts library. Furthermore, I have delved into the realm of APIs, gaining valuable insights and experience.",
 	},
 ];
