@@ -1,3 +1,7 @@
+type SkillsType = {
+	name: string;
+	icon: string;
+};
 type ProjectType = {
 	name: string;
 	icon: string | IconType;
@@ -36,4 +40,11 @@ type CarrierType = {
 	role: string;
 };
 
-export type { ProjectType, SkillsProps, NavType, GoToProps, CarrierType };
+export type {
+	ProjectType,
+	SkillsProps,
+	NavType,
+	GoToProps,
+	CarrierType,
+	SkillsType,
+};

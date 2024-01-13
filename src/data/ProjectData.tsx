@@ -1,42 +1,10 @@
 import trans from "/Overview.jpg";
 import Inception from "/src/assets/ProjectsImg/inception.gif";
-import { Code, Computer } from "@mui/icons-material";
-import { FaDocker, FaReact } from "react-icons/fa";
-import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
-import { SiNestjs } from "react-icons/si";
-import IRC from "/src/assets/ProjectsImg/irc.jpg";
-import Container from "/src/assets/ProjectsImg/container.jpg";
+import { FaDocker } from "react-icons/fa";
 import { ProjectType } from "../_types/types";
 import CarRental from "/src/assets/ProjectsImg/Car-Rental.png";
 import Ecommerce from "/src/assets/ProjectsImg/Minimalist-Ecommerce.png";
 import ChooseGif from "/src/assets/ProjectsImg/chooseGif.png";
-
-const Technologies = [
-	{
-		name: "C / Cpp",
-		icon: <Code />,
-	},
-	{
-		name: "DevOps",
-		icon: <Computer />,
-	},
-	{
-		name: "JavaScript",
-		icon: <BiLogoJavascript />,
-	},
-	{
-		name: "TypeScript",
-		icon: <BiLogoTypescript />,
-	},
-	{
-		name: "ReactJs",
-		icon: <FaReact />,
-	},
-	{
-		name: "NestJs",
-		icon: <SiNestjs />,
-	},
-];
 
 const ProjectsData: ProjectType[] = [
 	{
@@ -117,4 +85,4 @@ const ProjectsData: ProjectType[] = [
 	// },
 ];
 
-export { Technologies, ProjectsData };
+export { ProjectsData };

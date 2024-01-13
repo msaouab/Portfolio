@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import TextProfile from "../components/TextProfile";
+import SocialMedia from "../components/SocialMedia";
+import SkillsSection from "../components/SkillsSection";
 
 const ProfileContainer = styled.main`
 	display: flex;
@@ -122,6 +124,8 @@ const Profile = () => {
 			<div className="ProfileImage"></div>
 			<hr />
 			<TextProfile />
+			<SkillsSection />
+			{/* <SocialMedia /> */}
 		</ProfileContainer>
 	);
 };
