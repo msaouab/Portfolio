@@ -22,7 +22,7 @@ const TextContainer = styled.article`
 
 const TextProfile = () => {
 	return (
-		<TextContainer className="">
+		<TextContainer>
 			<p>
 				I'm SAOUAB Mohamed, a Full-Stack Developer at Alpha10X, and a
 				student at 1337 Coding School in Khouribga - UM6P (42 Network),

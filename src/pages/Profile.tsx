@@ -107,7 +107,7 @@ const Profile = () => {
 
 	return (
 		<ProfileContainer>
-			<h1 className="">
+			<h1>
 				<TypingText
 					text="Hi, I'm SAOUAB Mohamed"
 					onFinishTyping={handleTypingFinish}
@@ -120,7 +120,7 @@ const Profile = () => {
 				)}
 			</h1>
 			<div className="ProfileImage"></div>
-			<hr className="" />
+			<hr />
 			<TextProfile />
 		</ProfileContainer>
 	);

@@ -106,7 +106,7 @@ const Footer = () => {
 	}, []);
 
 	return (
-		<BottomNav className="">
+		<BottomNav>
 			<div
 				className="Points"
 				onMouseEnter={handleMouseEnter}

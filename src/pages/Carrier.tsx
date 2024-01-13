@@ -53,7 +53,7 @@ const CarrierContainer = styled.section`
 
 const Carrier = () => {
 	return (
-		<CarrierContainer className="debug">
+		<CarrierContainer>
 			{CarrierData.map((carrier, index) => (
 				<article className="carrier" key={index}>
 					<a

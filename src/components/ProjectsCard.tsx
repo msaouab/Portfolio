@@ -58,7 +58,7 @@ const ProjectsCard = (project: any, key: number) => {
 		project.project;
 
 	return (
-		<CardsContainer className="">
+		<CardsContainer>
 			<ImgContainer source={image} alt={name} />
 			<div className="projectInfo">
 				<h3 className="projectName">
