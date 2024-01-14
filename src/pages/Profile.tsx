@@ -43,11 +43,6 @@ const ProfileContainer = styled.main`
 			justify-content: center;
 		}
 	}
-	& > :last-child {
-		@media (max-width: 768px) {
-			width: 100%;
-		}
-	}
 	@keyframes profileImg {
 		0% {
 			border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
