@@ -14,12 +14,7 @@ const ProfileContainer = styled.main`
 	justify-content: center;
 	gap: 2rem;
 	color: var(--text-color);
-	& > hr {
-		width: 3rem;
-		height: 0.1rem;
-		background-color: var(--text-color);
-		border-radius: 1rem;
-	}
+	overflow: hidden;
 	& > h1 {
 		text-align: center;
 		font-family: var(--font-name);
@@ -27,6 +22,17 @@ const ProfileContainer = styled.main`
 			width: 2.4rem;
 			height: 2.4rem;
 			margin-left: 0.5rem;
+		}
+		@media (max-width: 768px) {
+			font-size: 1.5rem;
+		}
+		@media (max-width: 400px) {
+			font-size: 1rem;
+			& > img {
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-left: 0.5rem;
+			}
 		}
 	}
 	& > .ProfileImage {
@@ -37,25 +43,9 @@ const ProfileContainer = styled.main`
 			justify-content: center;
 		}
 	}
-	@media (max-width: 768px) {
-		& > h1 {
-			font-size: 1.5rem;
-		}
-		& > h2 {
-			font-size: 1rem;
-		}
-	}
-	@media (max-width: 400px) {
-		& > h1 {
-			font-size: 1rem;
-			& > img {
-				width: 1.5rem;
-				height: 1.5rem;
-				margin-left: 0.5rem;
-			}
-		}
-		& > h2 {
-			font-size: 0.8rem;
+	& > :last-child {
+		@media (max-width: 768px) {
+			width: 100%;
 		}
 	}
 	@keyframes profileImg {
@@ -114,7 +104,6 @@ const Profile = () => {
 			<div className="ProfileImage">
 				<ProfileImage />
 			</div>
-			<hr />
 			<TextProfile />
 			{/* <SkillsSection /> */}
 		</ProfileContainer>

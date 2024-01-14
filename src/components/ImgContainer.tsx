@@ -1,3 +1,4 @@
+import { Skeleton, Stack } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -48,6 +49,15 @@ export const ImgContainer = ({
 	return (
 		<ImgStyle>
 			<div className="ImgBackground">
+				{loading && (
+					<Stack spacing={1}>
+						<Skeleton
+							variant="circular"
+							width={400}
+							height={400}
+						></Skeleton>
+					</Stack>
+				)}
 				<img
 					src={source}
 					alt={alt}

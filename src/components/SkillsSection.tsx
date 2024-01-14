@@ -3,9 +3,6 @@ import SkillsData from "../data/SkillsData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Shuffle } from "@mui/icons-material";
-import { SkillsType } from "../_types/types";
-import { useEffect, useState } from "react";
 
 const ListSkills = styled.div`
 	color: #fff;
@@ -58,15 +55,13 @@ const SampleArrow = () => {
 };
 
 const SkillsSection = () => {
-	const [shuffledSkills, setShuffledSkills] = useState<SkillsType[]>([]);
-
 	const settings = {
 		dots: false,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 6,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 2000,
 		nextArrow: <SampleArrow />,
 		prevArrow: <SampleArrow />,
@@ -93,17 +88,6 @@ const SkillsSection = () => {
 			},
 		],
 	};
-	const shuffle = (array: SkillsType[]) => {
-		for (let i = array.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[array[i], array[j]] = [array[j], array[i]];
-		}
-		return array;
-	};
-
-	useEffect(() => {
-		setShuffledSkills(shuffle(SkillsData));
-	}, [SkillsData]);
 
 	return (
 		<SkillsStyle className="">
