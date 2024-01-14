@@ -52,7 +52,8 @@ export const ImgContainer = ({
 				{loading && (
 					<Stack spacing={1}>
 						<Skeleton
-							variant="circular"
+							variant="rectangular"
+							animation="wave"
 							width={400}
 							height={400}
 						></Skeleton>

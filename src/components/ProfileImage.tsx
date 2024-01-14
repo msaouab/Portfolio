@@ -49,7 +49,7 @@ const ProfileImage = () => {
 			{loading && (
 				<Stack spacing={1}>
 					<Skeleton
-						variant="circular"
+						variant="rectangular"
 						width={400}
 						height={400}
 					></Skeleton>
