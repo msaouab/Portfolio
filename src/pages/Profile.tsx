@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import TextProfile from "../components/TextProfile";
-import SocialMedia from "../components/SocialMedia";
 import SkillsSection from "../components/SkillsSection";
+import ProfileImage from "../components/ProfileImage";
+
+const HiHand =
+	"https://user-images.githubusercontent.com/49567393/149633910-977f6211-103e-4220-b74d-8bf8cd9a896f.gif";
 
 const ProfileContainer = styled.main`
 	display: flex;
@@ -27,19 +30,11 @@ const ProfileContainer = styled.main`
 		}
 	}
 	& > .ProfileImage {
-		width: 300px;
-		height: 300px;
-		border: 4px solid rgba(0, 0, 0, 0.6);
-		animation: profileImg 5s infinite;
-		transition: border-radius 1s ease-in-out;
-		position: relative;
-		background: url("/me.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: top;
-		@media (max-width: 400px) {
-			width: 200px;
-			height: 200px;
+		@media (max-width: 768px) {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
 		}
 	}
 	@media (max-width: 768px) {
@@ -114,18 +109,14 @@ const Profile = () => {
 					text="Hi, I'm SAOUAB Mohamed"
 					onFinishTyping={handleTypingFinish}
 				/>
-				{showGif && (
-					<img
-						src="https://user-images.githubusercontent.com/49567393/149633910-977f6211-103e-4220-b74d-8bf8cd9a896f.gif"
-						alt=""
-					/>
-				)}
+				{showGif && <img src={HiHand} />}
 			</h1>
-			<div className="ProfileImage"></div>
+			<div className="ProfileImage">
+				<ProfileImage />
+			</div>
 			<hr />
 			<TextProfile />
-			<SkillsSection />
-			{/* <SocialMedia /> */}
+			{/* <SkillsSection /> */}
 		</ProfileContainer>
 	);
 };

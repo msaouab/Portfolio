@@ -45,6 +45,7 @@ function AppRouter() {
 						<Route path="/" element={<Profile />} />
 						<Route path="/carrier" element={<Carrier />} />
 						<Route path="/project" element={<Projects />} />
+						{/*		add Article Page	*/}
 					</Routes>
 				</main>
 				<footer>
