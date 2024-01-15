@@ -6,7 +6,7 @@ const TextContainer = styled.article`
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	gap: 0.7rem;
+	gap: 0.5rem;
 	line-height: 1.3rem;
 	& > p {
 		& > a {
@@ -24,30 +24,29 @@ const TextProfile = () => {
 	return (
 		<TextContainer>
 			<p>
-				I'm SAOUAB Mohamed, a Full-Stack Developer at Alpha10X, and a
-				student at 1337 Coding School in Khouribga - UM6P (42 Network),
-				Morocco.
-			</p>
-			<p>I build digital experiences, and I love what I do.
-				I recently started working to build my career and publish my
-				recent projects here. If you would like to find out more about
-				this coding school and its exceptional education model:{" "}
+				I'm SAOUAB Mohamed, a junior full-stack developer and a software
+				developer student at{" "}
 				<a
 					href="https://1337.ma/en/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					1337 Coding School
+					1337
 				</a>{" "}
-				or{" "}
+				Coding School- UM6P{" "}
 				<a
-					href="https://42.fr/en/homepage/"
+					href="https://www.42network.org/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					42 School
-				</a>
-				.
+					42 Network
+				</a>{" "}
+				in Khouribga, Morocco.
+			</p>
+			<p>I build digital experiences, and I love what I do.</p>
+			<p>
+				I recently started working to build my career and publish my
+				recent projects here.
 			</p>
 		</TextContainer>
 	);

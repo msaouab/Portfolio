@@ -8,29 +8,14 @@ import Projects from "./pages/Projects";
 import Carrier from "./pages/Carrier";
 
 const RoutesContainer = styled.div`
-	display: grid;
-	grid-template-rows: 5vh auto 5vh;
-	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	height: 100dvh;
-	gap: 2rem;
-	& > header {
-		padding: 0;
-		margin: 0;
-	}
-	& > main {
-		padding-top: 2rem;
-	}
-	& > footer {
-		padding-bottom: 1rem;
-	}
-	@media (max-width: 1000px) {
-		& > footer {
-		}
-	}
-	@media (max-width: 500px) {
-		& > footer {
-			margin-top: 4rem !important;
-		}
+	gap: 4rem;
+
+	@media (max-width: 768px) {
+		gap: 1rem;
 	}
 `;
 

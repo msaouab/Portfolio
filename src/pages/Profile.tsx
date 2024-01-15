@@ -14,29 +14,26 @@ const ProfileContainer = styled.main`
 	justify-content: center;
 	gap: 2rem;
 	color: var(--text-color);
-	/* box-sizing: border-box; */
-
-	/* overflow: hidden; */
 	& > h1 {
-		align-items: center;
-		justify-content: center;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
+		gap: 0.5rem;
 		font-family: var(--font-name);
 		& > img {
 			width: 2.4rem;
 			height: 2.4rem;
-			/* margin-left: 0.5rem; */
 		}
 		@media (max-width: 768px) {
 			font-size: 1.5rem;
 		}
 		@media (max-width: 400px) {
 			font-size: 1rem;
+			gap: 0.2rem;
 			& > img {
 				width: 1.5rem;
 				height: 1.5rem;
-				margin-left: 0.5rem;
 			}
 		}
 	}

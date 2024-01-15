@@ -14,6 +14,7 @@ const BottomNav = styled.div`
 	justify-content: space-between;
 	gap: 5rem;
 	margin-left: 5%;
+	margin-bottom: 1rem;
 	& > .Points {
 		display: flex;
 		gap: 0.5rem;
@@ -80,10 +81,11 @@ const BottomNav = styled.div`
 		justify-content: center;
 		align-items: center;
 		margin: 0;
-		padding: 0 2rem;
+		margin-bottom: 1rem;
 		& > .footer {
 			& > .copyright {
 				flex-direction: column;
+				padding: 1rem 0 0 0;
 			}
 		}
 	}
