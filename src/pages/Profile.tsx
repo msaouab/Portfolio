@@ -37,7 +37,15 @@ const ProfileContainer = styled.main`
 			}
 		}
 	}
-	& > .ProfileImage {
+	& > .Profile {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 2rem;
+		max-width: 1200px;
+		width: 100%;
 		@media (max-width: 768px) {
 			width: 100%;
 			height: 100%;
@@ -90,7 +98,7 @@ const Profile = () => {
 	};
 
 	return (
-		<ProfileContainer className="">
+		<ProfileContainer>
 			<h1>
 				<TypingText
 					text="Hi, I'm SAOUAB Mohamed"
@@ -98,10 +106,10 @@ const Profile = () => {
 				/>
 				{showGif && <img src={HiHand} />}
 			</h1>
-			<div className="ProfileImage">
+			<div className="Profile">
 				<ProfileImage />
+				<TextProfile />
 			</div>
-			<TextProfile />
 			<SkillsBar />
 		</ProfileContainer>
 	);
