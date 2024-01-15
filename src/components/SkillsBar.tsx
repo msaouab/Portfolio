@@ -57,7 +57,7 @@ const SampleArrow = () => {
 	);
 };
 
-const SkillsSection = () => {
+const SkillsBar = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -110,4 +110,4 @@ const SkillsSection = () => {
 	);
 };
 
-export default SkillsSection;
+export default SkillsBar;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import TextProfile from "../components/TextProfile";
-import SkillsSection from "../components/SkillsSection";
 import ProfileImage from "../components/ProfileImage";
+import SkillsBar from "../components/SkillsBar";
 
 const HiHand =
 	"https://user-images.githubusercontent.com/49567393/149633910-977f6211-103e-4220-b74d-8bf8cd9a896f.gif";
@@ -105,7 +105,7 @@ const Profile = () => {
 				<ProfileImage />
 			</div>
 			<TextProfile />
-			<SkillsSection />
+			<SkillsBar />
 		</ProfileContainer>
 	);
 };
