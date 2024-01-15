@@ -4,7 +4,7 @@ import ListSocialmedia from "../data/ListSocialmedia";
 const SocialMediaContainer = styled.div`
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: .1rem;
+	gap: 0.1rem;
 	place-items: center;
 	& > a {
 		color: var(--text-color);
@@ -27,18 +27,12 @@ const SocialMediaContainer = styled.div`
 `;
 
 const SocialMedia = () => {
-
 	return (
 		<SocialMediaContainer>
 			{ListSocialmedia.map((elem, index) => {
 				const { icon, link } = elem;
 				return (
-					<a
-						key={index}
-						href={link}
-						target="_blank"
-						rel="noreferrer"
-					>
+					<a key={index} href={link} target="_blank" rel="noreferrer">
 						{icon}
 					</a>
 				);

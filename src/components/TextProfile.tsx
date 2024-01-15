@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import SocialMedia from "./SocialMedia";
 
 const TextContainer = styled.article`
 	width: 520px;
@@ -48,6 +49,7 @@ const TextProfile = () => {
 				I recently started working to build my career and publish my
 				recent projects here.
 			</p>
+			<SocialMedia />
 		</TextContainer>
 	);
 };

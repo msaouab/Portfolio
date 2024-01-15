@@ -12,7 +12,7 @@ const ProfileContainer = styled.main`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	gap: 4rem;
 	color: var(--text-color);
 	& > h1 {
 		display: flex;
@@ -52,6 +52,10 @@ const ProfileContainer = styled.main`
 			display: flex;
 			justify-content: center;
 		}
+	}
+	@media (max-width: 970px) {
+		padding: 2rem;
+		gap: 2rem;
 	}
 	@keyframes profileImg {
 		0% {

@@ -12,7 +12,7 @@ const RoutesContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100dvh;
-	gap: 4rem;
+	gap: 2rem;
 
 	@media (max-width: 768px) {
 		gap: 1rem;
@@ -34,9 +34,7 @@ function AppRouter() {
 						{/*		add Article Page	*/}
 					</Routes>
 				</main>
-				<footer>
-					<Footer />
-				</footer>
+				<Footer />
 			</RoutesContainer>
 		</BrowserRouter>
 	);
