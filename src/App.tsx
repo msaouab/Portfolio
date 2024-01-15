@@ -14,7 +14,8 @@ const RoutesContainer = styled.div`
 	height: 100dvh;
 	gap: 2rem;
 	& > header {
-		padding-top: 1rem;
+		padding: 0;
+		margin: 0;
 	}
 	& > main {
 		padding-top: 2rem;

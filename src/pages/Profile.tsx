@@ -14,14 +14,19 @@ const ProfileContainer = styled.main`
 	justify-content: center;
 	gap: 2rem;
 	color: var(--text-color);
-	overflow: hidden;
+	/* box-sizing: border-box; */
+
+	/* overflow: hidden; */
 	& > h1 {
+		align-items: center;
+		justify-content: center;
+		display: flex;
 		text-align: center;
 		font-family: var(--font-name);
 		& > img {
 			width: 2.4rem;
 			height: 2.4rem;
-			margin-left: 0.5rem;
+			/* margin-left: 0.5rem; */
 		}
 		@media (max-width: 768px) {
 			font-size: 1.5rem;
@@ -88,7 +93,7 @@ const Profile = () => {
 	};
 
 	return (
-		<ProfileContainer>
+		<ProfileContainer className="">
 			<h1>
 				<TypingText
 					text="Hi, I'm SAOUAB Mohamed"
@@ -100,7 +105,7 @@ const Profile = () => {
 				<ProfileImage />
 			</div>
 			<TextProfile />
-			{/* <SkillsSection /> */}
+			<SkillsSection />
 		</ProfileContainer>
 	);
 };

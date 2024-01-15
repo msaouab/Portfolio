@@ -10,12 +10,16 @@ const ListSkills = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
+	gap: 1rem;
 	width: 100%;
 	& > img {
 		width: 4rem;
 		height: 4rem;
 		object-fit: cover;
+		@media (max-width: 768px) {
+			width: 3rem;
+			height: 3rem;
+		}
 	}
 	& > p {
 		color: #fff;
@@ -27,20 +31,19 @@ const SkillsStyle = styled.div`
 	background-color: #1a2540;
 	color: #fff;
 	height: 100px;
-	padding: 2rem;
-	width: 100%;
 	display: flex !important;
 	justify-content: center;
 	align-items: center;
-	width: 100% !important;
+	max-width: 100vw;
+	width: 100%;
+	overflow: hidden;
+	padding: 2rem 0;
 	& > .sliderContainer {
-		display: flex !important;
-		justify-content: center;
-		align-items: center;
 		max-width: 1200px;
-		@media (max-width: 1200px) {
-			max-width: 1100px;
-		}
+		width: 100%;
+	}
+	@media (max-width: 768px) {
+		padding: 1rem 0;
 	}
 `;
 
@@ -59,7 +62,7 @@ const SkillsSection = () => {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 6,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: false,
 		autoplaySpeed: 2000,
@@ -70,20 +73,24 @@ const SkillsSection = () => {
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 4,
-					infinite: true,
+				},
+			},
+			{
+				breakpoint: 868,
+				settings: {
+					slidesToShow: 3,
 				},
 			},
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 3,
-					initialSlide: 2,
+					slidesToShow: 2,
 				},
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 350,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 				},
 			},
 		],
