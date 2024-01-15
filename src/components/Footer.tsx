@@ -13,7 +13,7 @@ const BottomNav = styled.footer`
 	& > .copyright {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		text-align: center;
 		flex-wrap: wrap;
 		gap: 1rem;
