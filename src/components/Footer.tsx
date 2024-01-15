@@ -18,28 +18,15 @@ const BottomNav = styled.footer`
 		flex-wrap: wrap;
 		gap: 1rem;
 		padding: 1rem;
-		& > p {
-			font-family: var(--font-name);
-		}
-		& > span {
+		font-family: var(--font-name);
+		& > a {
 			display: flex;
-			gap: 0.5rem;
-			& > a {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-				text-decoration: none;
-				color: #000;
-				font-size: 1rem;
-				cursor: pointer;
-			}
-			& > a:hover {
-				color: var(--secondary-color);
-			}
+			text-decoration: none;
+			color: #000;
+			cursor: pointer;
 		}
-		@media (max-width: 400px) {
-			justify-content: center;
+		& > a:hover {
+			color: var(--secondary-color);
 		}
 	}
 `;
@@ -57,17 +44,12 @@ const Footer = () => {
 			<div className="Bottomline"></div>
 			<div className="copyright">
 				<p>Copyright © {currentYear}. All rights are reserved</p>
-				<span>
-					<a href="https://github.com/msaouab" target="_blank">
-						<FiGithub />
-					</a>
-					<a
-						href="https://www.linkedin.com/in/msaouab/"
-						target="_blank"
-					>
-						<RiLinkedinLine />
-					</a>
-				</span>
+				<a href="https://github.com/msaouab" target="_blank">
+					<FiGithub />
+				</a>
+				<a href="https://www.linkedin.com/in/msaouab/" target="_blank">
+					<RiLinkedinLine />
+				</a>
 			</div>
 		</BottomNav>
 	);
