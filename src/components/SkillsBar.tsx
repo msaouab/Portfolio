@@ -64,7 +64,7 @@ const SkillsBar = () => {
 		speed: 500,
 		slidesToShow: 5,
 		slidesToScroll: 1,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 2000,
 		nextArrow: <SampleArrow />,
 		prevArrow: <SampleArrow />,
