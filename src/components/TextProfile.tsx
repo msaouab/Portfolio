@@ -34,7 +34,7 @@ const TextProfile = () => {
 				>
 					1337
 				</a>{" "}
-				Coding School- UM6P{" "}
+				Coding School - UM6P{" "}
 				<a
 					href="https://www.42network.org/"
 					target="_blank"

@@ -1,42 +1,61 @@
 import styled from "styled-components";
-import ListSocialmedia from "../data/ListSocialmedia";
+import Socialmedia from "../data/ListSocialmedia";
 
 const SocialMediaContainer = styled.div`
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0.1rem;
-	place-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	padding-top: 2rem;
 	& > a {
-		color: var(--text-color);
-		border: 1px solid white;
 		border-radius: 50%;
-		transition: transform 0.35s;
+		transition: box-shadow 0.3s ease-in;
 		box-sizing: border-box;
 		text-decoration: none;
 		padding: 8px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0.3rem;
+		position: relative;
+		& > img {
+			width: 25px;
+			height: 25px;
+		}
+		& > .tooltip {
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #000;
+			color: #fff;
+			padding: 6px 10px;
+			border-radius: 5px;
+			opacity: 0;
+			visibility: hidden;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
 	}
 	& > a:hover {
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-		transform: translate(2px, -4px);
-		transition: transform 0.35s, color 0.35s;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		& > .tooltip {
+			opacity: 1;
+			visibility: visible;
+			top: -50px;
+		}
 	}
 `;
 
 const SocialMedia = () => {
 	return (
 		<SocialMediaContainer>
-			{ListSocialmedia.map((elem, index) => {
-				const { icon, link } = elem;
-				return (
-					<a key={index} href={link} target="_blank" rel="noreferrer">
-						{icon}
-					</a>
-				);
-			})}
+			{Socialmedia.map((elem, index) => (
+				<a key={index} href={elem.url} target="_blank" rel="noreferrer">
+					<img src={elem.icon} alt={elem.name} />
+					<div className="tooltip">{elem.name}</div>
+				</a>
+			))}
 		</SocialMediaContainer>
 	);
 };

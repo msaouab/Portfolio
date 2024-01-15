@@ -40,6 +40,12 @@ type CarrierType = {
 	role: string;
 };
 
+type SocialMediaType = {
+	url: string;
+	name: string;
+	icon: string;
+};
+
 export type {
 	ProjectType,
 	SkillsProps,
@@ -47,4 +53,5 @@ export type {
 	GoToProps,
 	CarrierType,
 	SkillsType,
+	SocialMediaType,
 };

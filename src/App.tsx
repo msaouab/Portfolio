@@ -23,9 +23,7 @@ function AppRouter() {
 	return (
 		<BrowserRouter>
 			<RoutesContainer>
-				<header>
-					<NavBar />
-				</header>
+				<NavBar />
 				<main>
 					<Routes>
 						<Route path="/" element={<Profile />} />

@@ -3,7 +3,6 @@ import { ImgContainer } from "./ImgContainer";
 import { SkillsCard } from "./SkillsCard";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
-import { GoToProps } from "../_types/types";
 
 const CardsContainer = styled.div`
 	display: flex;

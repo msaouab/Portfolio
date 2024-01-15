@@ -1,50 +1,36 @@
-import {
-	FaEnvelope,
-	FaGithub,
-	FaInstagram,
-	FaLinkedin,
-	FaTelegram,
-	FaTwitter,
-	FaWhatsapp,
-} from "react-icons/fa";
+import { SocialMediaType } from "../_types/types";
+import twitter from "../assets/SocialMedia/twitter.svg";
+import gmail from "../assets/SocialMedia/gmail.svg";
+import github from "../assets/SocialMedia/github.svg";
+import telegram from "../assets/SocialMedia/telegram.svg";
+import linkedin from "../assets/SocialMedia/linkedin.svg";
 
-const GithubIcon = () => <FaGithub size={25}/>;
-const InstagramIcon = () => <FaInstagram size={25} />;
-const LinkedinIcon = () => <FaLinkedin size={25} />;
-const TelegramIcon = () => <FaTelegram size={25} />;
-const TwitterIcon = () => <FaTwitter size={25} />;
-const WhatsappIcon = () => <FaWhatsapp size={25} />;
-const EmailIcon = () => <FaEnvelope size={25} />;
-
-const listSocialmedia = [
+const Socialmedia: SocialMediaType[] = [
 	{
-		id: 0,
-		link: "mailto:saouab.mohammed@gmail.com",
-		name: "Mail",
-		cls: "Mail",
-		icon: <EmailIcon />,
+		url: "mailto:saouab.mohammed@gmail.com",
+		name: "Gmail",
+		icon: gmail,
 	},
 	{
-		id: 1,
-		link: "https://github.com/msaouab",
+		url: "https://github.com/msaouab",
 		name: "Github",
-		cls: "Github",
-		icon: <GithubIcon />,
+		icon: github,
 	},
 	{
-		id: 2,
-		link: "https://www.linkedin.com/in/msaouab/",
+		url: "https://www.linkedin.com/in/msaouab/",
 		name: "Linkedin",
-		cls: "Linkedin",
-		icon: <LinkedinIcon />,
+		icon: linkedin,
 	},
 	{
-		id: 3,
-		link: "https://twitter.com/msaouab",
-		name: "Twitter",
-		cls: "Twitter",
-		icon: <TwitterIcon />,
+		url: "https://twitter.com/msaouab",
+		name: "twitter",
+		icon: twitter,
+	},
+	{
+		url: "https://t.me/msaouab",
+		name: "Telegram",
+		icon: telegram,
 	},
 ];
 
-export default listSocialmedia;
+export default Socialmedia;

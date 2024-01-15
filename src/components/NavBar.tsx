@@ -4,7 +4,7 @@ import { Squash as Hamburger } from "hamburger-react";
 import { NavLink } from "react-router-dom";
 import NavData from "../data/NavData";
 
-const NavBarContainer = styled.nav`
+const NavBarContainer = styled.header`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

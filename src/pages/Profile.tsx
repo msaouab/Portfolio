@@ -54,7 +54,7 @@ const ProfileContainer = styled.main`
 		}
 	}
 	@media (max-width: 970px) {
-		padding: 2rem;
+		padding: 2rem 0;
 		gap: 2rem;
 	}
 	@keyframes profileImg {
