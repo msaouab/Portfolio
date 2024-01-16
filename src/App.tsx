@@ -22,18 +22,16 @@ const RoutesContainer = styled.div`
 function AppRouter() {
 	return (
 		<BrowserRouter>
-			<RoutesContainer>
-				<NavBar />
-				<main>
-					<Routes>
-						<Route path="/" element={<Profile />} />
-						<Route path="/carrier" element={<Carrier />} />
-						<Route path="/project" element={<Projects />} />
-						{/*		add Article Page	*/}
-					</Routes>
-				</main>
-				<Footer />
-			</RoutesContainer>
+			<NavBar />
+			<main>
+				<Routes>
+					<Route path="/" element={<Profile />} />
+					<Route path="/carrier" element={<Carrier />} />
+					<Route path="/project" element={<Projects />} />
+					{/*		add Article Page	*/}
+				</Routes>
+			</main>
+			<Footer />
 		</BrowserRouter>
 	);
 }
@@ -56,9 +54,9 @@ function App() {
 	}, []);
 
 	return (
-		<>
+		<RoutesContainer>
 			<AppRouter />
-		</>
+		</RoutesContainer>
 	);
 }
 

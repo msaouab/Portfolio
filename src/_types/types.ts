@@ -6,8 +6,8 @@ type ProjectType = {
 	name: string;
 	icon: string | IconType;
 	description: string;
-	technologies: string[];
 	image: string;
+	imgType: "scrollable" | "fixed";
 	demo: string;
 	code: string;
 	skills: string[];

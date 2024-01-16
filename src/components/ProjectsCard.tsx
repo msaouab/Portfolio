@@ -5,19 +5,14 @@ import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 
 const CardsContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	text-align: center;
 	gap: 2rem;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-	max-width: 1000px;
-	&:first-child {
-		border: 2px solid black;
-	}
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	padding: 1rem;
 	& > .projectInfo {
-		min-width: 400px;
-		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -50,15 +45,21 @@ const CardsContainer = styled.div`
 			}
 		}
 	}
+	@media (max-width: 700px) {
+		grid-template-columns: 1fr;
+		& > .projectInfo {
+			gap: 1rem;
+		}
+	}
 `;
 
-const ProjectsCard = (project: any, key: number) => {
-	const { name, image, demo, code, icon, description, skills } =
+const ProjectsCard = (project: any) => {
+	const { name, image, demo, code, icon, description, skills, imgType } =
 		project.project;
 
 	return (
-		<CardsContainer>
-			<ImgContainer source={image} alt={name} />
+		<CardsContainer className="">
+			<ImgContainer source={image} alt={name} imgType={imgType} />
 			<div className="projectInfo">
 				<h3 className="projectName">
 					{name} <span className="icon">{icon}</span>

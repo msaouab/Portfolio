@@ -11,16 +11,17 @@ const CarrierContainer = styled.section`
 	max-width: 1200px;
 	gap: 5rem;
 	margin: 0 auto;
+	padding: 2rem;
 	& > .carrier {
 		border: 1px solid #eaeaea;
 		border-radius: 10px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: start;
 		gap: 1rem;
+		padding: 2rem;
 		& > .companyName {
 			display: flex;
 			gap: 0.1rem;
@@ -49,6 +50,28 @@ const CarrierContainer = styled.section`
 			line-height: 1.3;
 		}
 	}
+	@media (max-width: 768px) {
+		gap: 1rem;
+		& > .carrier {
+			padding: 1rem;
+			& > .companyName {
+				font-size: 1rem;
+			}
+			& > aside {
+				flex-direction: column;
+				gap: 0.5rem;
+				& > .jobTitle {
+					font-size: 1rem;
+				}
+				& > .jobPeriod {
+					font-size: 0.9rem;
+				}
+			}
+			& > .jobRole {
+				font-size: 0.9rem;
+			}
+		}
+	}
 `;
 
 const Carrier = () => {
@@ -63,7 +86,7 @@ const Carrier = () => {
 					>
 						{carrier.companyName} <GoLinkExternal />
 					</a>
-					<ImgContainer source={carrier.img} />
+					<ImgContainer source={carrier.img} imgType="scrollable" />
 					<aside>
 						<p className="jobTitle">{carrier.jobTitle}</p>
 						<p className="jobPeriod">{carrier.jobPeriod}</p>

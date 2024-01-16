@@ -1,40 +1,48 @@
 import { Skeleton, Stack } from "@mui/material";
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const ImgStyle = styled.div`
+type ImgSize = {
+	$imgsize: string;
+};
+
+const ImgStyle = styled.div<ImgSize>`
 	.ImgBackground {
 		height: 300px;
 		width: 100%;
+		height: ${(props) => (props.$imgsize === "fixed" ? "100%" : "")};
 		overflow: hidden;
-		border-radius: 8px;
-		border: 1px solid #76767633;
+		border-radius: 6px;
+		border: 1px solid #a7a7a7;
 		& > img {
 			width: 100%;
-			object-fit: contain;
+			height: ${(props) => (props.$imgsize === "fixed" ? "100% !important" : "")};
+			object-fit: cover;
 			object-position: center;
 			transform: translateY(0%);
-			transition: transform 10s ease-in-out 0s;
 			height: auto;
 			background-color: #76767633;
 			box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-			&:hover {
-				transform: translateY(calc(-100% + 350px));
-			}
+			${(props) =>
+				props.$imgsize === "scrollable" &&
+				css`
+					transition: transform 10s ease-in-out 0s;
+					&:hover {
+						transform: translateY(calc(-100% + 350px));
+					}
+				`}
 		}
-	}
-	@media (max-width: 400px) {
-		/* width: 80%; */
-		/* height: 500px; */
 	}
 `;
 
 export const ImgContainer = ({
 	source,
 	alt,
+	imgType,
 }: {
 	source: string;
 	alt?: string;
+	imgType: "scrollable" | "fixed";
 }) => {
 	const [loading, setLoading] = useState<boolean>(true);
 
@@ -47,7 +55,7 @@ export const ImgContainer = ({
 	};
 
 	return (
-		<ImgStyle>
+		<ImgStyle $imgsize={imgType}>
 			<div className="ImgBackground">
 				{loading && (
 					<Stack spacing={1}>

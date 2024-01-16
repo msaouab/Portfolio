@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import TextProfile from "../components/TextProfile";
 import ProfileImage from "../components/ProfileImage";
 import SkillsBar from "../components/SkillsBar";
+import Project from "./Projects";
 
 const HiHand =
 	"https://user-images.githubusercontent.com/49567393/149633910-977f6211-103e-4220-b74d-8bf8cd9a896f.gif";
 
-const ProfileContainer = styled.main`
+const ProfileContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
