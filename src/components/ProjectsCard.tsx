@@ -9,7 +9,7 @@ const CardsContainer = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 	text-align: center;
 	gap: 2rem;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 	border-radius: 15px;
 	padding: 1rem;
 	& > .projectInfo {
