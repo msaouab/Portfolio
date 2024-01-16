@@ -16,7 +16,8 @@ const ImgStyle = styled.div<ImgSize>`
 		border: 1px solid #a7a7a7;
 		& > img {
 			width: 100%;
-			height: ${(props) => (props.$imgsize === "fixed" ? "100% !important" : "")};
+			height: ${(props) =>
+				props.$imgsize === "fixed" ? "100% !important" : ""};
 			object-fit: cover;
 			object-position: center;
 			transform: translateY(0%);
@@ -39,10 +40,12 @@ export const ImgContainer = ({
 	source,
 	alt,
 	imgType,
+	widthImg = 300,
 }: {
 	source: string;
 	alt?: string;
 	imgType: "scrollable" | "fixed";
+	widthImg?: number;
 }) => {
 	const [loading, setLoading] = useState<boolean>(true);
 
@@ -62,7 +65,7 @@ export const ImgContainer = ({
 						<Skeleton
 							variant="rectangular"
 							animation="wave"
-							width={400}
+							width={widthImg}
 							height={400}
 						></Skeleton>
 					</Stack>

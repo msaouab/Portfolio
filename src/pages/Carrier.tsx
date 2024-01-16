@@ -86,7 +86,11 @@ const Carrier = () => {
 					>
 						{carrier.companyName} <GoLinkExternal />
 					</a>
-					<ImgContainer source={carrier.img} imgType="scrollable" />
+					<ImgContainer
+						source={carrier.img}
+						imgType="scrollable"
+						widthImg={1200}
+					/>
 					<aside>
 						<p className="jobTitle">{carrier.jobTitle}</p>
 						<p className="jobPeriod">{carrier.jobPeriod}</p>

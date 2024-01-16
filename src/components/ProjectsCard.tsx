@@ -59,7 +59,7 @@ const ProjectsCard = (project: any) => {
 
 	return (
 		<CardsContainer className="">
-			<ImgContainer source={image} alt={name} imgType={imgType} />
+			<ImgContainer source={image} alt={name} imgType={imgType} widthImg={460}/>
 			<div className="projectInfo">
 				<h3 className="projectName">
 					{name} <span className="icon">{icon}</span>
