@@ -13,7 +13,6 @@ const CarrierContainer = styled.section`
 	margin: 0 auto;
 	padding: 2rem;
 	& > .carrier {
-		/* border: 1px solid #eaeaea; */
 		border-radius: 10px;
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 		display: flex;
