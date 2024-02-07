@@ -6,8 +6,8 @@ const NavData: NavType[] = [
 		name: "About Me",
 	},
 	{
-		path: "/carrier",
-		name: "Carrier",
+		path: "/experience",
+		name: "Experience",
 	},
 	{
 		path: "/project",

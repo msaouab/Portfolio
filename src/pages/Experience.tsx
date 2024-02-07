@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { ImgContainer } from "../components/ImgContainer";
-import CarrierData from "../data/CarrierData";
+import ExperienceData from "../data/ExperienceData";
 import { GoLinkExternal } from "react-icons/go";
 
-const CarrierContainer = styled.section`
+const ExperienceContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -12,7 +12,7 @@ const CarrierContainer = styled.section`
 	gap: 5rem;
 	margin: 0 auto;
 	padding: 2rem;
-	& > .carrier {
+	& > .experience {
 		border-radius: 10px;
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 		display: flex;
@@ -51,7 +51,7 @@ const CarrierContainer = styled.section`
 	}
 	@media (max-width: 768px) {
 		gap: 1rem;
-		& > .carrier {
+		& > .experience {
 			padding: 1rem;
 			& > .companyName {
 				font-size: 1rem;
@@ -73,32 +73,32 @@ const CarrierContainer = styled.section`
 	}
 `;
 
-const Carrier = () => {
+const Experience = () => {
 	return (
-		<CarrierContainer>
-			{CarrierData.map((carrier, index) => (
-				<article className="carrier" key={index}>
+		<ExperienceContainer>
+			{ExperienceData.map((experience, index) => (
+				<article className="experience" key={index}>
 					<a
-						href={carrier.companyLink}
+						href={experience.companyLink}
 						target="_blank"
 						className="companyName"
 					>
-						{carrier.companyName} <GoLinkExternal />
+						{experience.companyName} <GoLinkExternal />
 					</a>
 					<ImgContainer
-						source={carrier.img}
+						source={experience.img}
 						imgType="scrollable"
 						widthImg={1200}
 					/>
 					<aside>
-						<p className="jobTitle">{carrier.jobTitle}</p>
-						<p className="jobPeriod">{carrier.jobPeriod}</p>
+						<p className="jobTitle">{experience.jobTitle}</p>
+						<p className="jobPeriod">{experience.jobPeriod}</p>
 					</aside>
-					<p className="jobRole">{carrier.role}</p>
+					<p className="jobRole">{experience.role}</p>
 				</article>
 			))}
-		</CarrierContainer>
+		</ExperienceContainer>
 	);
 };
 
-export default Carrier;
+export default Experience;

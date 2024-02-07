@@ -1,7 +1,7 @@
-import { CarrierType } from "../_types/types";
-import Alpha10X from "../assets/CarrierImg/ALPHA10X.png";
+import { ExperienceType } from "../_types/types";
+import Alpha10X from "../assets/ExperienceImg/ALPHA10X.png";
 
-const CarrierData: CarrierType[] = [
+const ExperienceData: ExperienceType[] = [
 	{
 		img: Alpha10X,
 		companyName: "Alpha10X",
@@ -13,4 +13,4 @@ const CarrierData: CarrierType[] = [
 	},
 ];
 
-export default CarrierData;
+export default ExperienceData;

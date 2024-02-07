@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
-import Carrier from "./pages/Carrier";
+import Experience from "./pages/Experience";
 
 const RoutesContainer = styled.div`
 	display: flex;
@@ -26,7 +26,7 @@ function AppRouter() {
 			<main>
 				<Routes>
 					<Route path="/" element={<Profile />} />
-					<Route path="/carrier" element={<Carrier />} />
+					<Route path="/experience" element={<Experience />} />
 					<Route path="/project" element={<Projects />} />
 					{/*		add Article Page	*/}
 				</Routes>

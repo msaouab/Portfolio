@@ -24,12 +24,12 @@ const SocialMediaContainer = styled.div`
 		}
 		& > .tooltip {
 			position: absolute;
-			top: -30px;
+			top: -35px;
 			left: 50%;
 			transform: translateX(-50%);
 			background-color: #000;
 			color: #fff;
-			padding: 6px 10px;
+			padding: 3px 5px 1px;
 			border-radius: 5px;
 			opacity: 0;
 			visibility: hidden;
@@ -42,7 +42,7 @@ const SocialMediaContainer = styled.div`
 		& > .tooltip {
 			opacity: 1;
 			visibility: visible;
-			top: -50px;
+			top: -35px;
 		}
 	}
 `;

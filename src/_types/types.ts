@@ -30,7 +30,7 @@ type GoToProps = {
 	text: string;
 };
 
-type CarrierType = {
+type ExperienceType = {
 	img: string;
 	companyName: string;
 	companyLink: string;
@@ -51,7 +51,7 @@ export type {
 	SkillsProps,
 	NavType,
 	GoToProps,
-	CarrierType,
+	ExperienceType,
 	SkillsType,
 	SocialMediaType,
 };

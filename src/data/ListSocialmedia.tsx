@@ -8,17 +8,17 @@ import linkedin from "../assets/SocialMedia/linkedin.svg";
 const Socialmedia: SocialMediaType[] = [
 	{
 		url: "mailto:saouab.mohammed@gmail.com",
-		name: "Gmail",
+		name: "gmail",
 		icon: gmail,
 	},
 	{
 		url: "https://github.com/msaouab",
-		name: "Github",
+		name: "github",
 		icon: github,
 	},
 	{
 		url: "https://www.linkedin.com/in/msaouab/",
-		name: "Linkedin",
+		name: "linkedin",
 		icon: linkedin,
 	},
 	{
@@ -28,7 +28,7 @@ const Socialmedia: SocialMediaType[] = [
 	},
 	{
 		url: "https://t.me/msaouab",
-		name: "Telegram",
+		name: "telegram",
 		icon: telegram,
 	},
 ];
